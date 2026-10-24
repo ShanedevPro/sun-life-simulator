@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-24",
+  "status": "local-content-and-UI-passed-production-check-in-progress",
+  "content": {
+    "nodes": 120,
+    "photos": 52,
+    "decisions": 7,
+    "endings": 8,
+    "paths": 15,
+    "historicalNodes": 67,
+    "historicalCutoff": "2026-09-12"
+  },
+  "unitTests": 15,
+  "browserTests": {
+    "regression": 21,
+    "fullUI": 9
+  },
+  "fullSceneCapture": {
+    "standard": {
+      "scenes": 120,
+      "size": "390x844",
+      "errors": 0,
+      "maxPhotoCache": 6
+    },
+    "large": {
+      "scenes": 120,
+      "size": "320x568",
+      "errors": 0,
+      "clipped": [
+        "U05 margin only",
+        "B6_02 fixed in focused final check"
+      ]
+    }
+  },
+  "visualReview": {
+    "newImages": 38,
+    "existingImages": 14,
+    "historicalSequences": 1,
+    "parallelSequences": 7,
+    "finalCorrections": [
+      "B6_02 short screen glyph clipping",
+      "C02 landscape text clipping",
+      "Long black cards rendered as giant headlines"
+    ]
+  },
+  "unverified": [
+    "physical iOS Safari",
+    "physical Android",
+    "human reading time and enjoyment"
+  ],
+  "timing": {
+    "targetMinutes": [
+      10,
+      15
+    ],
+    "authoredBudgetSeconds": 855,
+    "historicalCharacters": 1917,
+    "note": "Budget and text count, not measured human reading time."
+  }
+}

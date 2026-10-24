@@ -1,0 +1,34 @@
+{
+  "name": "sunge-interactive-life",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "engines": { "node": ">=22.13" },
+  "type": "module",
+  "scripts": {
+    "assets": "node scripts/prepare-assets.mjs",
+    "check:content": "node scripts/check-content.mjs",
+    "dev": "pnpm assets && vite --host 127.0.0.1 --port 5173 --strictPort",
+    "build": "pnpm assets && tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173 --strictPort",
+    "test": "pnpm assets && vitest run",
+    "test:e2e": "playwright test",
+    "dev:lan": "pnpm assets && vite --host 0.0.0.0 --port 5173 --strictPort"
+  },
+  "dependencies": {
+    "phaser": "4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "~5.7.2",
+    "vite": "^6.3.1",
+    "vitest": "^3.2.0",
+    "@playwright/test": "^1.55.0",
+    "sharp": "^0.34.0",
+    "@types/node": "^22.0.0"
+  }
+}

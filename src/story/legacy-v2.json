@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "id": "P01",
+      "next": "P02"
+    },
+    {
+      "id": "P02",
+      "next": "P03"
+    },
+    {
+      "id": "P03",
+      "next": "H01"
+    },
+    {
+      "id": "H01",
+      "next": "H02"
+    },
+    {
+      "id": "H02",
+      "next": "H03"
+    },
+    {
+      "id": "H03",
+      "next": "H04"
+    },
+    {
+      "id": "H04",
+      "next": "H05"
+    },
+    {
+      "id": "H05",
+      "next": "H06"
+    },
+    {
+      "id": "H06",
+      "next": "H07"
+    },
+    {
+      "id": "H07",
+      "choices": [
+        {
+          "id": "go_shanghai",
+          "label": "去上海参加复赛",
+          "to": "H08",
+          "route": "historical"
+        },
+        {
+          "id": "stay_exam",
+          "label": "留下准备高考",
+          "to": "H13",
+          "route": "parallel_B1"
+        }
+      ]
+    },
+    {
+      "id": "H08",
+      "next": "H09"
+    },
+    {
+      "id": "H09",
+      "next": "H10"
+    },
+    {
+      "id": "H10",
+      "next": "H10B"
+    },
+    {
+      "id": "H10B",
+      "next": "H11"
+    },
+    {
+      "id": "H11",
+      "next": "H12"
+    },
+    {
+      "id": "H12",
+      "next": "U01"
+    },
+    {
+      "id": "H13",
+      "next": "H13B"
+    },
+    {
+      "id": "H13B",
+      "next": "H13C"
+    },
+    {
+      "id": "H13C",
+      "next": "H14"
+    },
+    {
+      "id": "H14",
+      "next": "B1_01"
+    }
+  ]
+}

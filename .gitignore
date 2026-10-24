@@ -1,0 +1,17 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+.DS_Store
+public/assets/*.webp
+src/story/content.json
+release/
+docs/qa/**/*.png
+docs/qa/**/*.jpg
+docs/qa/**/*.webm
+docs/qa/e2e-results.json
+docs/qa/full-ui-*/
+docs/qa/full-game-*/regression/
+docs/qa/full-game-*/presentation/
+docs/qa/full-game-*/loading/
+docs/qa/full-game-*/route-paths.json
