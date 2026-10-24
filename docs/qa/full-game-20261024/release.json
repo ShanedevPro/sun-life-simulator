@@ -1,0 +1,27 @@
+{
+  "verifiedAt": "2026-10-24T07:41:13.955Z",
+  "repository": "https://github.com/ShanedevPro/sun-life-simulator",
+  "url": "https://shanedevpro.github.io/sun-life-simulator/",
+  "gameRevision": "5954829e17f915e33a9b11c390879640e37fabed",
+  "workflow": {
+    "runId": 40074162668,
+    "url": "https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40074162668",
+    "conclusion": "success",
+    "unitTests": 15,
+    "browserTests": 30
+  },
+  "tests": {
+    "unit": 15,
+    "productionChrome": 30,
+    "ciChromium": 30,
+    "liveDistinct": 10,
+    "matchingPhotos": 52
+  },
+  "codeLicense": "MIT",
+  "imageTerms": "ASSET_TERMS.md",
+  "unverified": [
+    "physical iOS Safari",
+    "physical Android",
+    "human reading time and enjoyment"
+  ]
+}

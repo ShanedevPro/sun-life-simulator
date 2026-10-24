@@ -2,7 +2,9 @@
 
 更新：2026-10-24。本文对应完整游戏：120 个剧情节点、52 张照片、7 次主要抉择、8 个结局和 15 条完整路径。现实路线截至 2026 年 9 月 12 日。目标阅读时长为 10–15 分钟，尚未真人计时；测试和设备检查范围以 [交付记录](docs/qa/full-game-20261024/README.md) 为准。
 
-**公开地址：待发布并验证后补充。** 拟发布仓库为 `ShanedevPro/sun-life-simulator`；本文不代表仓库已经创建或线上游戏已经验证。
+**[在线试玩](https://shanedevpro.github.io/sun-life-simulator/)** · [公开仓库](https://github.com/ShanedevPro/sun-life-simulator)
+
+2026-10-24 已完成实际 HTTPS 游玩检查。网站代码来自提交 `5954829e17f915e33a9b11c390879640e37fabed`；[发布工作流](https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40074162668) 成功。后续文档提交不代表重新部署了游戏，具体结果见交付记录。
 
 ## 1. 接手时先确认
 
@@ -97,7 +99,9 @@ PLAYTEST_URL=http://127.0.0.1:4173/sun-life-simulator/ pnpm test:e2e
 
 ## 5. 首次创建仓库并发布
 
-以下是明确执行发布任务时的步骤，不是只读检查。拟用名称为 `ShanedevPro/sun-life-simulator`；执行前确认账号、名称和已经审核的公开目录。先用 `gh auth status` 检查连接，不输出令牌。
+如果部署的是自己的 fork，把下列命令中的 `ShanedevPro/sun-life-simulator` 换成实际的 `OWNER/REPOSITORY`。仓库改名时，预览基础路径也改为 `/<实际仓库名>/`；线上地址从自己仓库的 Pages 配置读取。
+
+以下是明确执行发布任务时的步骤，不是只读检查。本文示例仓库为 `ShanedevPro/sun-life-simulator`；执行前确认账号、名称和已经审核的公开目录。先用 `gh auth status` 检查连接，不输出令牌。
 
 如果远端尚不存在、公开目录尚未初始化 Git，才在该目录执行：
 

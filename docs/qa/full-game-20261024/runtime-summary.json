@@ -1,6 +1,6 @@
 {
   "date": "2026-10-24",
-  "status": "local-content-and-UI-passed-production-check-in-progress",
+  "status": "published-and-functionally-verified",
   "content": {
     "nodes": 120,
     "photos": 52,
@@ -56,5 +56,55 @@
     "authoredBudgetSeconds": 855,
     "historicalCharacters": 1917,
     "note": "Budget and text count, not measured human reading time."
+  },
+  "productionSubpath": {
+    "url": "http://127.0.0.1:4173/sun-life-simulator/",
+    "browser": "Chrome",
+    "stats": {
+      "startTime": "2026-10-24T07:24:01.281Z",
+      "duration": 291206.717,
+      "expected": 30,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "cleanClone": {
+    "repository": "https://github.com/ShanedevPro/sun-life-simulator",
+    "revision": "5954829e17f915e33a9b11c390879640e37fabed",
+    "install": "frozen lockfile passed",
+    "content": "passed",
+    "unitTests": 15,
+    "build": "Pages subpath passed",
+    "gitStatus": "clean after build"
+  },
+  "publicChecks": {
+    "url": "https://shanedevpro.github.io/sun-life-simulator/",
+    "uniqueBrowserChecksPassed": 10,
+    "firstSuiteStats": {
+      "startTime": "2026-10-24T07:34:03.460Z",
+      "duration": 181479.904,
+      "expected": 8,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "isolatedRerunStats": {
+      "startTime": "2026-10-24T07:38:15.369Z",
+      "duration": 76020.8,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "photoHashesMatched": 52,
+    "harnessNote": "Two concurrent Playwright commands collided in a shared trace directory (ENOENT on context close). All-choice and refresh cases passed when rerun sequentially in an isolated output folder."
+  },
+  "githubActions": {
+    "runId": 40074162668,
+    "url": "https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40074162668",
+    "conclusion": "success",
+    "unitTests": 15,
+    "browserTests": 30
   }
 }
