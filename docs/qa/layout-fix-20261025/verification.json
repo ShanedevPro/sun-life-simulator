@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-25",
+  "version": "1.0.2",
+  "scope": "Responsive layout only",
+  "local": {
+    "content": "passed",
+    "unitTests": 15,
+    "browserCasesCovered": 32,
+    "productionSuite": {
+      "passed": 31,
+      "outdatedLandscapeAssertion": 1
+    },
+    "correctedDialogueRerun": {
+      "passed": 1,
+      "failed": 0
+    },
+    "desktopViewports": [
+      "943x421",
+      "844x390",
+      "500x400",
+      "1280x600",
+      "953x700",
+      "1440x900",
+      "1920x1080"
+    ],
+    "desktopAspect": "9:16",
+    "touchContext": {
+      "landscape": "844x390",
+      "portrait": "390x844"
+    },
+    "allChoicesLargeText": 14,
+    "storyNodesUnchanged": 120,
+    "selectedImagesUnchanged": 86,
+    "pagesBaseBuild": "passed"
+  },
+  "public": {
+    "status": "pending"
+  },
+  "unverified": [
+    "physical phones",
+    "human reading time"
+  ]
+}

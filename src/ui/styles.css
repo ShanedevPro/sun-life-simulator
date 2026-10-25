@@ -158,8 +158,10 @@ a { color: var(--brass); text-underline-offset: 4px; }
 .large-text .history-list p, .large-text .menu-row, .large-text .sheet-intro, .large-text .intertitle-caption { font-size: 20px; }
 .state-enter { animation: arrive .22s ease-out both; }
 @keyframes arrive { from { opacity: 0; } to { opacity: 1; } }
-@media (min-width: 600px) and (min-height: 701px) {
-  .game-frame, .cinema-menu { width: min(480px, calc((100dvh - 32px) * .5)); height: calc(100dvh - 32px); }
+/* Desktop windows keep the same portrait composition at every window height. */
+@media (min-width: 600px) and (hover: hover) and (pointer: fine), (orientation: landscape) and (hover: hover) and (pointer: fine), (min-width: 1024px) {
+  :root { --cinema-height: min(calc(100dvh - 32px), 853.333px); --cinema-width: calc(var(--cinema-height) * 9 / 16); }
+  .game-frame, .cinema-menu { width: var(--cinema-width); height: var(--cinema-height); }
   .game-frame { outline: 1px solid #e2ddc41a; }
 }
 @media (max-height: 700px) and (orientation: portrait) {
@@ -189,7 +191,8 @@ a { color: var(--brass); text-underline-offset: 4px; }
   .ending-actions .primary-button { min-height: 52px; padding-top: 10px; padding-bottom: 10px; }
   .ending-secondary { margin-top: 3px; }
 }
-@media (orientation: landscape) and (max-height: 700px) {
+/* Only compact touch screens use the sideways reading layout. */
+@media (orientation: landscape) and (max-height: 700px) and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
   .game-frame, .cinema-menu { width: min(900px, 100vw); height: 100dvh; }
   .photo-stage { right: 50%; }
   .photo-vignette { background: linear-gradient(90deg, transparent 35%, #090a0a 50%); }
@@ -231,5 +234,41 @@ a { color: var(--brass); text-underline-offset: 4px; }
   .pause-navigation { padding: 0; }
   .pause-navigation .menu-row, .pause-navigation .primary-button { min-height: 44px; padding-top: 8px; padding-bottom: 8px; font-size: 17px; }
   .replay-photo { width: 42%; height: 150px; float: left; margin: 0 22px 18px 0; }
+}
+@media (min-width: 600px) and (max-height: 760px) and (hover: hover) and (pointer: fine), (orientation: landscape) and (max-height: 760px) and (hover: hover) and (pointer: fine), (min-width: 1024px) and (max-height: 760px) {
+  :root { --pad: clamp(12px, calc(var(--cinema-width) * .055), 24px); --text: clamp(14px, calc(var(--cinema-width) * .0513), 20px); }
+  .large-text { --text: clamp(17px, calc(var(--cinema-width) * .0616), 24px); }
+  .game-header { padding-top: 8px; padding-right: 10px; }
+  .scene-time, .eyebrow { font-size: 10px; letter-spacing: .06em; }
+  .story-panel, .has-actions { max-height: calc(100% - 60px); padding-top: 12px; padding-bottom: 12px; }
+  .narrative { line-height: 1.5; }
+  .has-actions { background: linear-gradient(transparent, #090a0ab5 18%, #090a0af2 55%, #090a0a); }
+  .actions { margin-top: 12px; gap: 8px; }
+  .choice-button, .large-text .choice-button { min-height: 60px; padding: 10px 5px; gap: 12px; font-size: var(--text); line-height: 1.4; }
+  .continue-button { min-height: 44px; font-size: 10px; gap: 5px; }
+  .opening-mark { top: 20px; font-size: 9px; }
+  .opening-panel { padding-top: 24px; padding-bottom: 10px; }
+  .opening-panel h1 { font-size: clamp(28px, calc(var(--cinema-width) * .1), 40px); margin: 8px 0 12px; }
+  .opening-panel h1 span { font-size: 18px; }
+  .opening-line { font-size: 12px; margin-bottom: 14px; }
+  .primary-button, .large-text .primary-button { min-height: 44px; padding: 10px 5px; gap: 12px; font-size: var(--text); }
+  .opening-links { gap: 16px; }
+  .text-button { font-size: 12px; }
+  .disclosure { min-height: 28px; font-size: 9px; padding-top: 6px; }
+  .intertitle { padding-top: 56px; padding-bottom: 12px; }
+  .intertitle h1 { font-size: 28px; margin: 12px 0; }
+  .intertitle-subtitle, .intertitle-caption, .large-text .intertitle-caption { font-size: var(--text); }
+  .chapter-divider { margin: 16px auto; }
+  .ending-panel { height: auto; max-height: calc(100% - 64px); padding-top: 18px; padding-bottom: 10px; }
+  .ending-title { font-size: 24px; margin: 8px 0 10px; }
+  .ending-copy { line-height: 1.5; }
+  .ending-actions { margin-top: 8px; padding-top: 8px; }
+  .ending-secondary { gap: 8px; margin-top: 2px; }
+  .cinema-menu { padding-top: 20px; padding-bottom: 14px; }
+  .menu-header { margin-bottom: 16px; }
+  .menu-header h2, .pause-menu .menu-header h2 { font-size: 24px; }
+  .pause-navigation { padding: 8px 0; }
+  .pause-navigation .menu-row, .pause-navigation .primary-button { min-height: 44px; padding-top: 8px; padding-bottom: 8px; font-size: 16px; }
+  .pause-navigation .menu-row { padding-left: 28px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

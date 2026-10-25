@@ -154,7 +154,10 @@ test('photo endings keep text and controls usable on small phones and landscape'
       return { photoBottom: photo.bottom, photoRight: photo.right, panelTop: panel.top, panelLeft: panel.left };
     });
     if (size.height <= 700 && size.width < size.height) expect(rects.photoBottom).toBeLessThanOrEqual(rects.panelTop + 1);
-    if (size.width > size.height) expect(rects.photoRight).toBeLessThanOrEqual(rects.panelLeft + 1);
+    if (size.width > size.height) {
+      const box = (await frame(page).boundingBox())!;
+      expect(box.width / box.height).toBeCloseTo(9 / 16, 2);
+    }
     await shot(page, `06-ending-${size.width}x${size.height}`);
   }
 });
@@ -193,7 +196,10 @@ for (const target of ['H07', 'U02']) {
         return { photoBottom: photo.bottom, photoRight: photo.right, panelTop: panel.top, panelLeft: panel.left };
       });
       if (size.height <= 700 && size.width < size.height) expect(bounds.photoBottom).toBeLessThanOrEqual(bounds.panelTop + 1);
-      if (size.width > size.height) expect(bounds.photoRight).toBeLessThanOrEqual(bounds.panelLeft + 1);
+      if (size.width > size.height) {
+        const box = (await frame(page).boundingBox())!;
+        expect(box.width / box.height).toBeCloseTo(9 / 16, 2);
+      }
       await shot(page, `08-${target}-${size.width}x${size.height}-large`);
     }
     await page.setViewportSize({ width: 320, height: 568 });
@@ -256,4 +262,66 @@ test('long black narration uses reading text and keeps continuation visible', as
   }
   await step(page); await ready(page);
   await expect(frame(page)).toHaveAttribute('data-node', graph.F07.next!);
+});
+
+test('desktop windows retain a centered portrait frame and contain their controls', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await seedAt(page, 'P01', true);
+  for (const size of [{width:943,height:421}, {width:844,height:390}, {width:500,height:400}, {width:1280,height:600}, {width:953,height:700}, {width:1440,height:900}, {width:1920,height:1080}]) {
+    await page.setViewportSize(size); await ready(page);
+    const box = (await frame(page).boundingBox())!;
+    expect(box.width / box.height).toBeCloseTo(9 / 16, 2);
+    expect(box.x + box.width / 2).toBeCloseTo(size.width / 2, 0);
+    expect(box.y).toBeGreaterThanOrEqual(0);
+    expect(box.y + box.height).toBeLessThanOrEqual(size.height);
+    const elements = page.locator('.photo-stage, .game-header, .story-panel, .scene-time, .pause-button, .actions button');
+    for (const element of await elements.all()) {
+      const rect = (await element.boundingBox())!;
+      expect(rect.x).toBeGreaterThanOrEqual(box.x - 1);
+      expect(rect.x + rect.width).toBeLessThanOrEqual(box.x + box.width + 1);
+    }
+    const photo = (await page.locator('.photo-stage').boundingBox())!;
+    expect(photo.width).toBeCloseTo(box.width, 0);
+    await expect(page.getByRole('button', {name:'继续', exact:true})).toBeInViewport();
+    expect(await page.locator('.narrative-scroll').evaluate(element => element.scrollHeight <= element.clientHeight + 1)).toBe(true);
+    await shot(page, `13-desktop-${size.width}x${size.height}`);
+    await page.getByRole('button', {name:'暂停', exact:true}).click();
+    const menu = (await page.getByRole('dialog').boundingBox())!;
+    expect(menu.width).toBeCloseTo(box.width, 0);
+    expect(menu.height).toBeCloseTo(box.height, 0);
+    expect(menu.x).toBeCloseTo(box.x, 0);
+    await expect(page.getByRole('button', {name:'继续故事', exact:true})).toBeInViewport();
+    await shot(page, `14-desktop-pause-${size.width}x${size.height}`);
+    await page.keyboard.press('Escape');
+    await expect(frame(page)).toHaveAttribute('data-node','P01');
+  }
+  await page.setViewportSize({width:943,height:421});
+  await page.getByRole('button', {name:'暂停', exact:true}).click();
+  await page.getByRole('button', {name:'回到片头', exact:true}).click(); await ready(page);
+  await expect(page.getByRole('button', {name:'继续故事', exact:true})).toBeInViewport();
+  const opening = (await page.locator('.opening-panel').boundingBox())!;
+  expect(opening.y).toBeGreaterThanOrEqual((await frame(page).boundingBox())!.y + 40);
+  await shot(page, '14-desktop-opening-943x421');
+});
+
+test('a sideways touch phone retains the readable split layout and rotates back to portrait', async ({ browser }) => {
+  const context = await browser.newContext({ viewport:{width:844,height:390}, isMobile:true, hasTouch:true, reducedMotion:'reduce' });
+  try {
+    const page = await context.newPage();
+    await seedAt(page, 'C08', true);
+    expect(await page.evaluate(() => matchMedia('(hover: none) and (pointer: coarse)').matches)).toBe(true);
+    const photo = (await page.locator('.photo-stage').boundingBox())!;
+    const panel = (await page.locator('.story-panel').boundingBox())!;
+    expect(photo.x + photo.width).toBeLessThanOrEqual(panel.x + 1);
+    for (const button of await page.locator('.choice-button').all()) {
+      await expect(button).toBeInViewport();
+      expect((await button.boundingBox())!.height).toBeGreaterThanOrEqual(60);
+    }
+    await shot(page, '15-touch-landscape');
+    await page.setViewportSize({width:390,height:844}); await ready(page);
+    expect((await frame(page).boundingBox())!.width).toBe(390);
+    expect((await frame(page).boundingBox())!.height).toBe(844);
+    await expect(frame(page)).toHaveAttribute('data-node','C08');
+    await shot(page, '16-touch-portrait');
+  } finally { await context.close(); }
 });

@@ -164,7 +164,7 @@ test('dialogue remains fully readable on small screens with large subtitles', as
       return { photoBottom: photo.bottom, photoRight: photo.right, panelTop: panel.top, panelLeft: panel.left };
     });
     if (size.width < 400) expect(boxes.photoBottom).toBeLessThanOrEqual(boxes.panelTop + 1);
-    else expect(boxes.photoRight).toBeLessThanOrEqual(boxes.panelLeft + 1);
+    else { const box = (await page.locator('.game-frame').boundingBox())!; expect(box.width / box.height).toBeCloseTo(9 / 16, 2); }
     await shot(page, `20-dialogue-${size.width}x${size.height}-large`);
   }
 });

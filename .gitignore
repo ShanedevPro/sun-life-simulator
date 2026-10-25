@@ -11,6 +11,8 @@ docs/qa/**/*.jpg
 docs/qa/**/*.webm
 !docs/qa/visual-fix-20261025/graduation-phone.jpg
 !docs/qa/visual-fix-20261025/ending-phone.png
+!docs/qa/layout-fix-20261025/desktop.png
+!docs/qa/layout-fix-20261025/touch-phone.png
 docs/qa/e2e-results.json
 docs/qa/full-ui-*/
 docs/qa/full-game-*/regression/

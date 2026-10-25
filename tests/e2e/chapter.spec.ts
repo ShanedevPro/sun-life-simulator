@@ -122,7 +122,7 @@ test('short portrait, large text and landscape keep scene and choices separate',
     expect(await page.locator('.narrative-scroll').evaluate(el=>el.scrollHeight<=el.clientHeight+1)).toBe(true);
     const rects=await page.evaluate(()=>{const photo=document.querySelector('.photo-stage')!.getBoundingClientRect(), text=document.querySelector('.story-panel')!.getBoundingClientRect();return {photoBottom:photo.bottom,photoRight:photo.right,textTop:text.top,textLeft:text.left};});
     if(size.width===320||size.width===375)expect(rects.photoBottom).toBeLessThanOrEqual(rects.textTop+1);
-    if(size.width===844)expect(rects.photoRight).toBeLessThanOrEqual(rects.textLeft+1);
+    if(size.width===844){const box=(await frame(page).boundingBox())!;expect(box.width/box.height).toBeCloseTo(9/16,2);}
   }
   await page.getByRole('button',{name:'留下准备高考',exact:true}).click();await ready(page);await expect(frame(page)).toHaveAttribute('data-node','H13');
 });
