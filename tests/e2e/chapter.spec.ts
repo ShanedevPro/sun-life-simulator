@@ -5,7 +5,7 @@ const entry = process.env.PLAYTEST_URL ?? 'http://127.0.0.1:5173/';
 test.beforeEach(async ({ page }) => { await page.emulateMedia({ reducedMotion: 'reduce' }); });
 const frame = (page: Page) => page.locator('.game-frame');
 const ready = async (page: Page) => { await expect(frame(page)).toHaveAttribute('data-ready','true'); await expect(frame(page)).toHaveAttribute('data-reveal','complete'); };
-async function start(page: Page) { await page.goto(entry);await ready(page);await page.getByRole('button',{name:'开始人生',exact:true}).click(); }
+async function start(page: Page) { await page.goto(entry);await ready(page);await page.getByRole('button',{name:'开始故事',exact:true}).click(); }
 async function travel(page: Page,target:string,fork='去上海参加复赛') {
   for(let i=0;i<160;i++) {
     await ready(page);
@@ -42,7 +42,7 @@ test('mobile high-school routes retain cinematic history, recaps and checkpoint 
   page.on('request',r=>{if(r.url().endsWith('.webp'))requested.push(r.url());});
   await page.goto(entry);await ready(page);await screenshot(page,'01-opening');
   expect(new Set(requested).size).toBeLessThanOrEqual(2);
-  await page.getByRole('button',{name:'开始人生',exact:true}).click();
+  await page.getByRole('button',{name:'开始故事',exact:true}).click();
   await travel(page,'P03');await screenshot(page,'02-intertitle');
   await expect(page.locator('.intertitle h1')).toHaveText('再寄一次');
   await travel(page,'H01');await screenshot(page,'03-reading');
@@ -153,7 +153,7 @@ test('DPR 3 is capped at 2 while keeping CSS layout unchanged',async({browser})=
 test('invalid storage is recoverable',async({page})=>{
   await page.addInitScript(()=>localStorage.setItem('sunge.life.v4','{"version":999}'));
   await page.goto(entry);await ready(page);await expect(page.getByText('上次的进度暂时无法读取，可以重新开始。')).toBeVisible();
-  await page.getByRole('button',{name:'开始人生',exact:true}).click();await ready(page);await expect(frame(page)).toHaveAttribute('data-node','P01');
+  await page.getByRole('button',{name:'开始故事',exact:true}).click();await ready(page);await expect(frame(page)).toHaveAttribute('data-node','P01');
 });
 test('storage write rejection never falsely reports saved',async({page})=>{
   await page.addInitScript(()=>{Storage.prototype.setItem=()=>{throw new DOMException('denied','QuotaExceededError');};});

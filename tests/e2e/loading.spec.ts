@@ -29,7 +29,7 @@ test('normal photo changes, shared photos and black cards never flash loading fe
     };
     requestAnimationFrame(sample);
   });
-  await page.getByRole('button', { name: '开始人生', exact: true }).click();
+  await page.getByRole('button', { name: '开始故事', exact: true }).click();
   for (const id of ['P01', 'P02', 'P03', 'H01', 'H02', 'H03']) {
     await complete(page);
     await expect(frame(page)).toHaveAttribute('data-node', id);
@@ -46,7 +46,7 @@ test('a slow photo preserves the previous frame and delays the hint, text and co
   const gate = new Promise<void>(resolve => { release = resolve; });
   await page.route('**/p_huizhou.webp', async route => { await gate; await route.continue(); });
   await page.goto(entry); await complete(page);
-  await page.getByRole('button', { name: '开始人生', exact: true }).click(); await complete(page);
+  await page.getByRole('button', { name: '开始故事', exact: true }).click(); await complete(page);
   const bounds = (await page.locator('canvas').boundingBox())!;
   // Element screenshots also contain overlapping DOM. Compare the photo area,
   // excluding the date and subtitles that intentionally disappear at the cut.
@@ -84,8 +84,9 @@ test('a slow photo preserves the previous frame and delays the hint, text and co
 test('a slow opening uses the same discreet hint and enables start only after the photo', async ({ page }) => {
   let release!: () => void;
   const gate = new Promise<void>(resolve => { release = resolve; });
-  await page.route('**/h_manuscript.webp', async route => { await gate; await route.continue(); });
-  await page.goto(entry);
+  await page.route('**/title-screen.webp', async route => { await gate; await route.continue(); });
+  // The deliberately stalled preload must not block reaching the loading UI.
+  await page.goto(entry, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('.load-hint')).toBeVisible();
   await expect(page.getByRole('status')).toHaveText('载入中');
   await expect(frame(page)).toHaveAttribute('data-ready', 'false');
@@ -93,5 +94,5 @@ test('a slow opening uses the same discreet hint and enables start only after th
   await shot(page, '05-opening-wait');
   release(); await complete(page);
   await expect(page.locator('.load-hint')).toBeHidden();
-  await expect(page.getByRole('button', { name: '开始人生', exact: true })).toBeEnabled();
+  await expect(page.getByRole('button', { name: '开始故事', exact: true })).toBeEnabled();
 });

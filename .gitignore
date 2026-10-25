@@ -13,6 +13,8 @@ docs/qa/**/*.webm
 !docs/qa/visual-fix-20261025/ending-phone.png
 !docs/qa/layout-fix-20261025/desktop.png
 !docs/qa/layout-fix-20261025/touch-phone.png
+!docs/qa/homepage-20261025/phone.png
+!docs/qa/homepage-20261025/desktop.png
 docs/qa/e2e-results.json
 docs/qa/full-ui-*/
 docs/qa/full-game-*/regression/

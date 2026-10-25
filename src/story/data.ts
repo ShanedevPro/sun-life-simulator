@@ -16,7 +16,11 @@ export type StoryEnding = { id: EndingId; nodeId: string; title: string; summary
 type Content = { start: string; nodes: StoryNode[]; assets: Record<string, { url: string; title: string }>; chapters?: Record<string, Chapter>; decisions?: Record<string, StoryDecision>; endings?: Record<EndingId, StoryEnding>; sources?: Record<string, { title: string; url: string }> };
 const content = rawContent as unknown as Content;
 export const nodes = Object.fromEntries(content.nodes.map(n => [n.id, n]));
-export const assets = Object.fromEntries(Object.entries(content.assets).map(([key, asset]) => [key, { ...asset, url: `${import.meta.env.BASE_URL}${asset.url.replace(/^\/+/, '')}` }]));
+export const openingAsset = 'opening_cover';
+export const assets: Content['assets'] = {
+  ...Object.fromEntries(Object.entries(content.assets).map(([key, asset]) => [key, { ...asset, url: `${import.meta.env.BASE_URL}${asset.url.replace(/^\/+/, '')}` }])),
+  [openingAsset]: { url: `${import.meta.env.BASE_URL}title-screen.webp`, title: '片头封面' },
+};
 export const chapters = content.chapters ?? {};
 export const decisions = content.decisions ?? {};
 export const endings = (content.endings ?? {}) as Record<EndingId, StoryEnding>;

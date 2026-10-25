@@ -81,7 +81,7 @@ test('complete historical life and all seven alternatives through reached-choice
   page.on('pageerror', error => errors.push(error.message));
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto(site); await ready(page);
-  await page.getByRole('button', { name: '开始人生', exact: true }).click();
+  await page.getByRole('button', { name: '开始故事', exact: true }).click();
   expect(await walkToEnd(page)).toBe('R0');
   await expect(page.locator('.ending-title')).toHaveText(content.endings.R0.title);
   await expect(page.locator('.ending-panel')).toBeVisible();
@@ -119,7 +119,7 @@ test('new players see no future ending names or decision titles', async ({ page 
   for (const ending of Object.values(content.endings) as { title: string }[]) await expect(page.getByRole('dialog')).not.toContainText(ending.title);
   await shot(page, '04-unseen-lives');
   await page.keyboard.press('Escape');
-  await page.getByRole('button', { name: '开始人生', exact: true }).click(); await ready(page);
+  await page.getByRole('button', { name: '开始故事', exact: true }).click(); await ready(page);
   await shot(page, '00-birth');
   await page.getByRole('button', { name: '暂停', exact: true }).click();
   await expect(page.getByRole('button', { name: '已走过的选择', exact: true })).toHaveCount(0);

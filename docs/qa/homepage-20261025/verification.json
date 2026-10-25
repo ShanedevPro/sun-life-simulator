@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-25",
+  "version": "1.0.3",
+  "name": "孙哥的模拟人生",
+  "scope": "Title screen, branding, repository link",
+  "content": {
+    "nodesUnchanged": 120,
+    "scenePhotosUnchanged": 86,
+    "cover": "title-screen.webp",
+    "coverBytes": 152208,
+    "unitTestsPassed": 15
+  },
+  "public": {
+    "status": "pending"
+  },
+  "unverified": [
+    "physical phones"
+  ],
+  "local": {
+    "contentCheck": "passed",
+    "unitTestsPassed": 15,
+    "initialDevRegression": {
+      "passed": 32,
+      "failed": 2,
+      "causes": [
+        "authoring-time hot reload during initialization",
+        "stalled preload test waited for load instead of DOM readiness"
+      ]
+    },
+    "productionAffectedGameplayPassed": 1,
+    "productionSlowOpeningPassed": 1,
+    "finalHomepageCases": {
+      "passed": 2,
+      "failed": 0
+    },
+    "viewports": [
+      "393x698",
+      "390x844",
+      "320x568",
+      "943x421",
+      "1440x900"
+    ],
+    "touchRotation": [
+      "844x390",
+      "390x844"
+    ],
+    "minimumTouchTargetHeight": 44,
+    "designComparison": "passed after one spacing revision",
+    "selfHostedTitleFontBytes": 4516,
+    "pagesBaseBuild": "passed",
+    "typescript": "passed"
+  }
+}

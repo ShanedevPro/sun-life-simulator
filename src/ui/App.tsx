@@ -1,12 +1,15 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react';
 import { PhotoStage } from '../game/PhotoStage';
 import type { PhotoStatus } from '../game/PhotoScene';
-import { assets, nodes, isExit, chapters, decisions, endings, sources, type EndingId } from '../story/data';
+import { assets, openingAsset, nodes, isExit, chapters, decisions, endings, sources, type EndingId } from '../story/data';
 import { advance, newSave, rewind, type Save } from '../story/state';
 import { readSave, writeSave } from '../story/storage';
 import { Modal } from './Modal';
 import { useTextReveal } from './useTextReveal';
 import { useDelayedLoading } from './useDelayedLoading';
+import playIcon from './icons/play-fill.svg';
+import githubIcon from './icons/github.svg';
+import starIcon from './icons/star.svg';
 
 type Menu = 'pause' | 'history' | 'replay' | 'collection' | 'settings' | 'restart' | 'about' | 'sources' | null;
 const storage = () => window.localStorage;
@@ -45,7 +48,7 @@ export function App() {
   const chapterEnd = screen === 'story' && node?.kind === 'chapter-end';
   const chapter = node ? chapters[node.chapter] : undefined;
   const chapterName = chapter?.title ?? node?.chapter ?? '故事暂停了';
-  const asset = screen === 'opening' ? 'h_manuscript' : node?.asset ?? null;
+  const asset = screen === 'opening' ? openingAsset : node?.asset ?? null;
   const ready = photo.key === asset && photo.status === 'ready';
   const loading = asset !== null && (photo.key !== asset || photo.status === 'loading');
   const failed = photo.key === asset && photo.status === 'error';
@@ -149,21 +152,21 @@ export function App() {
     <div className="photo-vignette" />
     <div className="underlay" inert={menu !== null}>
       <span className="sr-only" aria-live="polite" aria-atomic="true">{screen === 'story' && ready && (ended || intertitle || chapterEnd) ? [ended ? ending?.title : node.title, ...node.text].filter(Boolean).join('。') : ''}</span>
-      {screen === 'opening' ? <>
-        <div className="opening-mark">一段可以重新选择的人生</div>
-        <section className={`opening-panel ${!ready ? 'awaiting-photo' : ''}`}>
-          <div className="eyebrow">1990—2026 · 八种人生</div>
-          <h1><span>孙割的</span><br />模拟人生</h1>
-          <p className="opening-line">那一次，你会怎么选？</p>
-          <button ref={actionRef} className="primary-button" data-focus-return disabled={!ready || busy} onClick={event => start(event)}><Diamond />{save ? '继续故事' : '开始人生'}<Arrow /></button>
+      {screen === 'opening' ? <div className={`opening-content ${!ready ? 'awaiting-photo' : ''}`}>
+        <h1 className="opening-title" aria-label="孙哥的模拟人生"><span className="title-prefix">孙哥的</span><span className="title-name">模拟人生</span></h1>
+        <section className="opening-panel" aria-label="故事菜单">
+          <button ref={actionRef} className="primary-button opening-start" data-focus-return disabled={!ready || busy} onClick={event => start(event)}><img src={playIcon} alt="" className="opening-play" />{save ? '继续故事' : '开始故事'}</button>
           <div className="opening-links">
             {save ? <button className="text-button" disabled={!ready || busy} onClick={() => openMenu('restart')}>重新开始</button> : null}
             <button className="text-button" onClick={() => openMenu('collection')}>走过的人生</button>
           </div>
           {issue ? <p className="notice" role="status">{issue}</p> : null}
-          <button className="disclosure" onClick={() => openMenu('about')}>取材于公开经历 · 画面与对白经过改编</button>
         </section>
-      </> : <>
+        <footer className="opening-footer">
+          <button className="text-button" onClick={() => openMenu('about')}>关于</button>
+          <a className="github-link" href="https://github.com/ShanedevPro/sun-life-simulator" target="_blank" rel="noopener noreferrer" aria-label="GitHub · 给项目点星（在新标签页打开）" title="在 GitHub 上给项目点星"><img src={githubIcon} alt="" />GitHub<img src={starIcon} alt="" className="github-star" /></a>
+        </footer>
+      </div> : <>
         <header className="game-header">
           {!intertitle && !chapterEnd && !ended ? <span className={`scene-time ${!ready ? 'awaiting-photo' : ''}`}>{node.time}</span> : <span />}
           <button className="icon-button pause-button" aria-label="暂停" data-focus-return disabled={busy && selection !== null} onClick={() => openMenu('pause')}><svg width="18" height="22" viewBox="0 0 18 22" aria-hidden="true"><path d="M5 4v14M13 4v14" stroke="currentColor" strokeWidth="2.5" /></svg></button>

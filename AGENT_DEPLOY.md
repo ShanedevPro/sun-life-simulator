@@ -59,6 +59,8 @@ CI 使用 `pnpm exec playwright install --with-deps chromium` 安装浏览器和
 
 `pnpm assets` 和 `pnpm build` 从 `story/approved-assets/<素材键>.webp` 读取选定图片，生成 `public/assets/` 和 `src/story/content.json`。正式构建要求图片齐全；不会调用生图服务、读取私有肖像或用旧图偷偷替代缺失素材。公开源码必须包含全部选定 WebP、剧情源、旧版本迁移图、锁文件、运行代码、测试、配置和许可文件。
 
+独立片头封面为 `public/title-screen.webp`，必须随源码和产物一起保留。它与剧情照片分别管理，首页标题和菜单使用真实文字及按钮。当前游戏名为「孙哥的模拟人生」；仓库名与 `sunge.life.v4` 存档键继续使用原标识，已有地址和进度仍可使用。
+
 全新克隆验收要在新目录执行上述安装、内容检查、测试和构建，确认不依赖原工作区的生成文件或未发布 PNG。不要只在长期使用的 `node_modules` 和 `public/assets` 上声称可复现。
 
 仅在内部检查未完成制作稿时，可以显式运行：

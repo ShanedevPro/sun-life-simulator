@@ -8,6 +8,8 @@ const missing = [];
 const fullPath = path.join(root, 'story/full-game.json');
 const fullGame = await fs.stat(fullPath).then(() => true, () => false);
 const story = JSON.parse(await fs.readFile(fullGame ? fullPath : path.join(root, 'story/prologue-high-school.json'), 'utf8'));
+const cover = await sharp(path.join(root, 'public/title-screen.webp')).metadata();
+if (cover.format !== 'webp' || !cover.width || !cover.height) throw new Error('Missing or invalid title-screen WebP.');
 await fs.mkdir(path.join(root, 'public/assets'), { recursive: true });
 const manifest = {};
 for (const [key, asset] of Object.entries(story.assets)) {
