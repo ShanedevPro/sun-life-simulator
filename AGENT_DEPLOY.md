@@ -4,7 +4,7 @@
 
 **[在线试玩](https://shanedevpro.github.io/sun-life-simulator/)** · [公开仓库](https://github.com/ShanedevPro/sun-life-simulator)
 
-当前版本为 1.0.2，于 2026-10-25 完成实际 HTTPS 检查。网站代码来自提交 `bb9d6337a55489280db44daac1ce59f8402803ac`；[发布工作流](https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40195396680) 成功，15 项单元测试和 32 项浏览器测试通过。本轮修复电脑短窗口误触发手机横屏布局的问题，发布后的桌面画框、触屏旋转与三个运行文件也已核对，见 [桌面比例修订记录](docs/qa/layout-fix-20261025/README.md)。86 张图片和剧情沿用上一版，逐图及全部场景的线上记录保留在画面修订记录中。后续文档提交只补充验收结果，不替换已部署的运行产物。
+当前版本为 1.0.3，于 2026-10-25 完成实际 HTTPS 检查。游戏名为「孙哥的模拟人生」，首页采用独立的无字封面，增加 GitHub 入口。网站代码来自提交 `53f4478eae2b3023819dace216ab287d39a41d67`；[发布工作流](https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40199098559) 成功，15 项单元测试和 34 项浏览器测试通过。公开首页的开始、续读、关于、链接、桌面/手机布局，以及封面、字体和三个运行文件均已核对，见 [首页改版记录](docs/qa/homepage-20261025/README.md)。86 张剧情照片与剧情节点沿用上一版；逐图记录和此前的 [比例修订记录](docs/qa/layout-fix-20261025/README.md) 保留。后续文档提交只补充验收结果，不替换已部署的运行产物。
 
 ## 1. 接手时先确认
 

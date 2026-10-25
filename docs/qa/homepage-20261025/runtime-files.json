@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-25T13:53:41.722Z",
+  "codeCommit": "53f4478eae2b3023819dace216ab287d39a41d67",
+  "status": "passed",
+  "title": "孙哥的模拟人生",
+  "files": [
+    {
+      "url": "https://shanedevpro.github.io/sun-life-simulator/assets/index-CXM4tzs2.js",
+      "bytes": 310714,
+      "sha256": "756d97d3c8777cca8227b8a36214615e6f7044825f0c61f09b114ba4560867d1",
+      "matchesLocal": true
+    },
+    {
+      "url": "https://shanedevpro.github.io/sun-life-simulator/assets/phaser-BsmXasWO.js",
+      "bytes": 1656683,
+      "sha256": "0545340af6f038293e949c700a300cc92ebb62f7baabc8d8880ae9196eca1d64",
+      "matchesLocal": true
+    },
+    {
+      "url": "https://shanedevpro.github.io/sun-life-simulator/assets/index-CSJyLLsr.css",
+      "bytes": 21562,
+      "sha256": "a2ffdbdbd84f8661ee30fad7ba6e28a0dea15122d95ee4d6275015d876865366",
+      "matchesLocal": true
+    },
+    {
+      "url": "https://shanedevpro.github.io/sun-life-simulator/assets/title-serif-Cc_tlGmI.woff2",
+      "bytes": 4516,
+      "sha256": "8aabcff8ae9e1205a6ddf6c68af97cbef1f9560dc81c034cc6a8cdc97025ff10",
+      "matchesLocal": true
+    },
+    {
+      "url": "https://shanedevpro.github.io/sun-life-simulator/title-screen.webp",
+      "bytes": 152208,
+      "sha256": "ae3389cc38561b9c336cff8b657074caf5ac100d0ab32701af1cfab1792ea0a5",
+      "matchesLocal": true
+    }
+  ]
+}

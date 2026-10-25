@@ -11,7 +11,28 @@
     "unitTestsPassed": 15
   },
   "public": {
-    "status": "pending"
+    "status": "passed",
+    "checkedAt": "2026-10-25T13:55:25.137Z",
+    "url": "https://shanedevpro.github.io/sun-life-simulator/",
+    "codeCommit": "53f4478eae2b3023819dace216ab287d39a41d67",
+    "workflowRun": 40199098559,
+    "workflowUrl": "https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40199098559",
+    "ci": {
+      "unitTestsPassed": 15,
+      "browserTestsPassed": 34
+    },
+    "live": {
+      "passed": 2,
+      "failed": 0,
+      "matchedFiles": 5,
+      "newTitleVerified": true,
+      "coverVerified": true,
+      "selfHostedFontVerified": true,
+      "githubDestinationVerified": true,
+      "userTabRefreshed": true,
+      "continueSavedStoryVisible": true,
+      "defaultLocalShortcutBuildUpdated": true
+    }
   },
   "unverified": [
     "physical phones"

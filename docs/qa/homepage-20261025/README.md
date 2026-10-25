@@ -22,4 +22,12 @@
 
 ![桌面首页](desktop.png)
 
-公开版本验收进行中。最终结果见 [检查记录](verification.json)。实体手机尚未实测。
+## 公开版本验收
+
+1.0.3 已发布到 [在线试玩](https://shanedevpro.github.io/sun-life-simulator/)。网站代码为提交 `53f4478eae2b3023819dace216ab287d39a41d67`；[发布工作流](https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40199098559) 完成，15 项单元测试、34 项浏览器测试全部通过。
+
+直接在公开 HTTPS 地址重跑两项首页检查，开始、续读、关于、GitHub 链接、五种视口及触屏旋转均通过。页面显示新名，封面、字体、CSS 和两个 JavaScript 文件共五个文件与本次构建的 SHA-256 一致，见 [运行文件核对](runtime-files.json) 与 [发布记录](deployment.json)。上面的两张截图也已替换成公开地址的实际画面。
+
+用户现有的浏览器标签页已经刷新，当前显示新版首页，并可继续原来的进度。桌面快捷方式所用的本地根路径构建也已更新。后续文档提交只补验收记录，不替换本次已发布的运行产物。
+
+完整结果见 [检查记录](verification.json)。检查使用桌面浏览器和模拟触屏，实体手机尚未实测。
