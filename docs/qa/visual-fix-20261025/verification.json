@@ -16,7 +16,25 @@
     "newImagesReviewed": 38
   },
   "public": {
-    "status": "pending-deployment-verification"
+    "status": "passed",
+    "url": "https://shanedevpro.github.io/sun-life-simulator/",
+    "codeCommit": "b9b4e62d060ffac78ca159d94d81c21b44b0d20d",
+    "workflow": "https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40170707482",
+    "workflowConclusion": "success",
+    "verifiedAt": "2026-10-25T07:01:23.246Z",
+    "matchingPhotos": 86,
+    "matchingRuntimeFiles": 3,
+    "sceneCapture": {
+      "viewport": "390x844",
+      "uniqueScenes": 120,
+      "paths": 15,
+      "historicalPathNodes": 67,
+      "endings": 8,
+      "maxCache": 6,
+      "maxConcurrentRequests": 2,
+      "errors": []
+    },
+    "note": "现实主线从头走完。后续分支从有效路线的首个未捕获节点恢复并走到结尾；不是人工阅读计时或实体手机测试。"
   },
   "unverified": [
     "physical iOS Safari",

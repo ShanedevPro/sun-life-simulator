@@ -4,7 +4,7 @@
 
 **[在线试玩](https://shanedevpro.github.io/sun-life-simulator/)** · [公开仓库](https://github.com/ShanedevPro/sun-life-simulator)
 
-首版于 2026-10-24 完成实际 HTTPS 游玩检查。网站代码来自提交 `5954829e17f915e33a9b11c390879640e37fabed`；[发布工作流](https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40074162668) 成功。后续文档提交不代表重新部署了游戏，本轮发布结果见画面修订记录。
+当前画面修订版于 2026-10-25 完成实际 HTTPS 检查。网站代码来自提交 `b9b4e62d060ffac78ca159d94d81c21b44b0d20d`；[发布工作流](https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40170707482) 成功。86 张图片、编译后的运行文件及全部场景已在线核对。后续文档提交只补充验收结果，具体证据见画面修订记录。
 
 ## 1. 接手时先确认
 

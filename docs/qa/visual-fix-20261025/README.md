@@ -4,7 +4,7 @@
 
 版本 1.0.1。120 个剧情节点、7 次主要抉择、8 个结局和 15 条完整路径均保留；选定照片由 52 张调整为 86 张。本轮新增或编辑 38 张，原来的 4 张退出当前选片。作者工作区保留旧图与生成原件。
 
-剧情节点、分流、结局和存档版本保持不变。原始生成图片、提示词与退选记录保留在作者工作区，公开仓库只包含选定的 WebP 和本页摘要。
+剧情节点、分流、结局和存档版本保持不变。原始生成图片、提示词与退选记录保留在作者工作区，公开仓库只包含选定的 WebP、两张实际界面示例和检查摘要。
 
 ## 这次改了什么
 
@@ -38,6 +38,10 @@
 
 ## 发布记录
 
-本地检查已通过。GitHub Pages 发布及真实地址的图片、路线验证将在部署后记录到 [检查结果](verification.json)。不能以本地构建代替线上检查。
+2026-10-25 已发布并完成实际 HTTPS 检查。网站代码提交为 [`b9b4e62`](https://github.com/ShanedevPro/sun-life-simulator/commit/b9b4e62d060ffac78ca159d94d81c21b44b0d20d)，[发布工作流](https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40170707482) 成功。后续文档提交仅补充验收结果，不改变已验证的网站产物。
+
+[公开试玩](https://shanedevpro.github.io/sun-life-simulator/) 的入口返回 200，三份编译后运行文件和全部 86 张选定照片与本地审核版本逐字节一致。线上实际浏览器捕获全部 120 幕、覆盖 15 条路径，八个结局正常，缓存最多 6 张，无页面错误、图片 HTTP 错误、正文裁切或横向溢出。现实主线从头走完；后续分支从有效进度的首个未捕获节点恢复后走到结尾。
+
+详见 [检查结果](verification.json)、[线上图片比对](public/public-assets.json)、[运行文件比对](public/runtime-files.json) 和 [部署状态](public/deployment.json)。首轮图片比对遇到传输中断，完整重跑时对网络中断作了有限重试；HTTP 失败和哈希不一致仍直接记为失败。
 
 详细记录：[选图审查](image-review.json)、[内容检查](content-check.json)、[前后复用对照](reuse-comparison.json)。源码部署方式见 [Agent 部署说明](../../../AGENT_DEPLOY.md)。

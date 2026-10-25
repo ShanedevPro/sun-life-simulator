@@ -6,7 +6,7 @@
 
 **[在线试玩](https://shanedevpro.github.io/sun-life-simulator/)** · [GitHub 源码](https://github.com/ShanedevPro/sun-life-simulator)
 
-直接在浏览器打开即可，无需安装。也可以在本机启动。本轮改了毕业照的视线、重复镜头和动作画面，具体范围与检查结果见 [画面修订记录](docs/qa/visual-fix-20261025/README.md)。
+直接在浏览器打开即可，无需安装。2026 年 10 月 25 日已核对公开版的全部场景和 86 张照片，也可以在本机启动。本轮改了毕业照的视线、重复镜头和动作画面，具体范围与检查结果见 [画面修订记录](docs/qa/visual-fix-20261025/README.md)。
 
 ## 怎么玩
 
