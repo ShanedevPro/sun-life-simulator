@@ -1,0 +1,26 @@
+{
+  "version": "1.0.1",
+  "date": "2026-10-25",
+  "local": {
+    "content": "passed",
+    "unitTests": 15,
+    "browserTests": 30,
+    "pagesBaseBuild": "passed",
+    "screens390": 120,
+    "screens320Large": 120,
+    "paths": 15,
+    "endings": 8,
+    "imageCacheLimit": 6,
+    "graphUnchanged": true,
+    "manualContactSheets": 15,
+    "newImagesReviewed": 38
+  },
+  "public": {
+    "status": "pending-deployment-verification"
+  },
+  "unverified": [
+    "physical iOS Safari",
+    "physical Android",
+    "human reading time"
+  ]
+}

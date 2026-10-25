@@ -1,7 +1,7 @@
 import { test, expect, type Page } from '@playwright/test';
 import fs from 'node:fs/promises';
 
-const out = 'docs/qa/full-game-20261024/loading';
+const out = `${process.env.PLAYTEST_OUTPUT ?? 'docs/qa/full-game-20261024'}/loading`;
 const entry = process.env.PLAYTEST_URL ?? 'http://127.0.0.1:5173/';
 const frame = (page: Page) => page.locator('.game-frame');
 async function complete(page: Page) {

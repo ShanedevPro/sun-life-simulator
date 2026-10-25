@@ -1,10 +1,10 @@
 # Agent 部署说明
 
-更新：2026-10-24。本文对应完整游戏：120 个剧情节点、52 张照片、7 次主要抉择、8 个结局和 15 条完整路径。现实路线截至 2026 年 9 月 12 日。目标阅读时长为 10–15 分钟，尚未真人计时；测试和设备检查范围以 [交付记录](docs/qa/full-game-20261024/README.md) 为准。
+更新：2026-10-25。本文对应完整游戏：120 个剧情节点、86 张照片、7 次主要抉择、8 个结局和 15 条完整路径。现实路线截至 2026 年 9 月 12 日。目标阅读时长为 10–15 分钟，尚未真人计时；本轮画面修订与检查范围见 [画面修订记录](docs/qa/visual-fix-20261025/README.md)，首版记录见 [完整交付记录](docs/qa/full-game-20261024/README.md)。
 
 **[在线试玩](https://shanedevpro.github.io/sun-life-simulator/)** · [公开仓库](https://github.com/ShanedevPro/sun-life-simulator)
 
-2026-10-24 已完成实际 HTTPS 游玩检查。网站代码来自提交 `5954829e17f915e33a9b11c390879640e37fabed`；[发布工作流](https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40074162668) 成功。后续文档提交不代表重新部署了游戏，具体结果见交付记录。
+首版于 2026-10-24 完成实际 HTTPS 游玩检查。网站代码来自提交 `5954829e17f915e33a9b11c390879640e37fabed`；[发布工作流](https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40074162668) 成功。后续文档提交不代表重新部署了游戏，本轮发布结果见画面修订记录。
 
 ## 1. 接手时先确认
 
@@ -55,7 +55,7 @@ CI 使用 `pnpm exec playwright install --with-deps chromium` 安装浏览器和
 
 ## 3. 内容、素材和干净构建
 
-唯一剧情源是 [story/full-game.json](story/full-game.json)。[完整剧本](story/FULL_SCRIPT.md)、[分镜表](story/FULL_SHOT_LIST.md)、[来源记录](story/SOURCES_FULL.md) 随内容同步。
+唯一剧情源是 [story/full-game.json](story/full-game.json)。[完整剧本](story/FULL_SCRIPT.md)、[分镜表](story/FULL_SHOT_LIST.md)、[来源记录](story/SOURCES_FULL.md) 随内容同步；编辑后执行 `pnpm exec node scripts/render-full-story.mjs` 从唯一剧情源重新生成。
 
 `pnpm assets` 和 `pnpm build` 从 `story/approved-assets/<素材键>.webp` 读取选定图片，生成 `public/assets/` 和 `src/story/content.json`。正式构建要求图片齐全；不会调用生图服务、读取私有肖像或用旧图偷偷替代缺失素材。公开源码必须包含全部选定 WebP、剧情源、旧版本迁移图、锁文件、运行代码、测试、配置和许可文件。
 

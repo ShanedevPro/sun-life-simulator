@@ -1,6 +1,6 @@
 import { test, expect, type Page } from '@playwright/test';
 import fs from 'node:fs/promises';
-const out = 'docs/qa/full-game-20261024/regression';
+const out = `${process.env.PLAYTEST_OUTPUT ?? 'docs/qa/full-game-20261024'}/regression`;
 const entry = process.env.PLAYTEST_URL ?? 'http://127.0.0.1:5173/';
 test.beforeEach(async ({ page }) => { await page.emulateMedia({ reducedMotion: 'reduce' }); });
 const frame = (page: Page) => page.locator('.game-frame');

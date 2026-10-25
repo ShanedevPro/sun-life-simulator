@@ -68,7 +68,7 @@ if (!problems.some(p => p.includes('cycle'))) trace(story.start);
 const result = { status: problems.length ? 'failed' : draft ? 'draft-graph-valid' : 'passed', nodes: story.nodes.length, photos: Object.keys(story.assets).length, imageBytes, decisions: Object.keys(story.decisions).length, endings: [...terminal], playablePaths: routes.length, longestPath: Math.max(0, ...routes.map(r => r.trail.length)), problems, warnings };
 console.log(JSON.stringify(result, null, 2));
 if (process.argv.includes('--report')) {
-  const folder = path.join(root, 'docs/qa/full-game-20261024'); await fs.mkdir(folder, { recursive: true });
+  const folder = path.resolve(root, process.env.PLAYTEST_OUTPUT ?? 'docs/qa/full-game-20261024'); await fs.mkdir(folder, { recursive: true });
   await fs.writeFile(path.join(folder, 'content-check.json'), JSON.stringify(result, null, 2) + '\n');
   await fs.writeFile(path.join(folder, 'route-paths.json'), JSON.stringify(routes, null, 2) + '\n');
 }

@@ -1,0 +1,427 @@
+{
+  "date": "2026-10-25",
+  "tool": "built-in image_gen",
+  "selectedNewOrEdited": 38,
+  "selectedTotal": 86,
+  "records": [
+    {
+      "key": "u_graduate_focus",
+      "title": "毕业离校",
+      "nodes": [
+        "U08"
+      ],
+      "sha256": "9baa779dbb11d8724870fe370ea056a6fcf0325e4deb5280996f5d0c08eae011",
+      "bytes": 124192,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Viewed full resolution: eyes align toward the same off-camera point; glasses clear; campus portrait identity and framing retained. Phone crop still to check."
+    },
+    {
+      "key": "u_history_class",
+      "title": "新的课堂",
+      "nodes": [
+        "U06"
+      ],
+      "sha256": "d02115c18ab357d5e6f65c8818cfce87431684540b29fd74214b96a0db44a127",
+      "bytes": 76520,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Rear-side classroom view shows listening and note-taking; no frontal gaze defect; ordinary clothes, desks and projector fit university years."
+    },
+    {
+      "key": "u_night_reading",
+      "title": "宿舍里的夜读",
+      "nodes": [
+        "U03"
+      ],
+      "sha256": "2b008cf3467ab1173b5070e73e23d017e5b43289d97c1862a905d07c7fd3e90d",
+      "bytes": 89206,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Black window and practical lamp establish night; gaze falls onto pages, hands and old laptop read coherently."
+    },
+    {
+      "key": "u_campus_discussion",
+      "title": "课本以外的讨论",
+      "nodes": [
+        "U07"
+      ],
+      "sha256": "2a96b5b9e8425f3da1fb68f676c4f9fdef044178090ddc717b0a10d0b1b77c41",
+      "bytes": 184768,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Three distinct classmates converse outdoors; main gaze follows the woman, gesture and papers support discussion; no solo-desk substitution."
+    },
+    {
+      "key": "u_packing_dorm",
+      "title": "收起四年前的行李",
+      "nodes": [
+        "U09"
+      ],
+      "sha256": "ad53b28e1b2db386770247d6f7a0a49af69fc0a02d7d67717c53a5061073e25c",
+      "bytes": 95646,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Side-back packing action puts books into backpack; dorm bed and desk persist, summer shirt and foliage fit departure."
+    },
+    {
+      "key": "c_product_detail",
+      "title": "手机里的产品讨论",
+      "nodes": [
+        "C04"
+      ],
+      "sha256": "5d0ef56764a5ea67337f4ed0b2ee30bd08e21099cd4c82ad4e432c3581f5589f",
+      "bytes": 49274,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Hands, early smartphone and paper wireframes support a product discussion without another central portrait."
+    },
+    {
+      "key": "c_budget_detail",
+      "title": "核对这一项",
+      "nodes": [
+        "C06"
+      ],
+      "sha256": "4dbc366b0e2328e9729b9e2aa1a0cc5ce9d9a404d47ef6e54cf043dcb6995f9e",
+      "bytes": 63484,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Gray sleeve, pen and colleague pointing hand support checking a specific item in the same meeting."
+    },
+    {
+      "key": "c_tron_start",
+      "title": "开始新的项目",
+      "nodes": [
+        "C09"
+      ],
+      "sha256": "1a51b1423d57e53dc922739af377fe68bd5fcd3a78d657f3dffa57b1119f4041",
+      "bytes": 68548,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Adult lead hands papers to a colleague while another works; new workspace and action distinguish commitment from pre-choice pose."
+    },
+    {
+      "key": "c_tron_team",
+      "title": "运转起来的团队",
+      "nodes": [
+        "C11"
+      ],
+      "sha256": "91a412994b36902d2f9787c5212c7fd77c3e4ce02b6d7e4732225416f00b1335",
+      "bytes": 123188,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Wider office with distinct staff at separate desks shows project operation rather than repeating the lead portrait."
+    },
+    {
+      "key": "w_waiting",
+      "title": "见面还没有发生",
+      "nodes": [
+        "W03"
+      ],
+      "sha256": "bb4c3f599b2ba3357762caf0a12688b34610041cf27b618a4d08a9f80b9baa94",
+      "bytes": 73718,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Side-back lead at window; closed laptop and phone on desk support waiting; no smile or event reenactment."
+    },
+    {
+      "key": "w_response_desk",
+      "title": "面对公开消息",
+      "nodes": [
+        "W07"
+      ],
+      "sha256": "aa30e5e85f103631a533edaeccbf3e6a536a74da7c619f95511a858c7f51997c",
+      "bytes": 102914,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Neutral adult looking down at laptop; no smiling interview, courtroom or invented alleged conduct."
+    },
+    {
+      "key": "b1_ask",
+      "title": "把问题问清楚",
+      "nodes": [
+        "B1_03"
+      ],
+      "sha256": "d903f99981ac80fa9010b9cde1a592e43057411aa9d1c729026124336f623142",
+      "bytes": 78498,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Young adult and older colleague talk across returned work; clear eyeline and distinct characters."
+    },
+    {
+      "key": "b1_rewrite",
+      "title": "先重写一版",
+      "nodes": [
+        "B1_04"
+      ],
+      "sha256": "330ccf8325409f6b2d392a427fb1ba8f9420eb1d9d1cff009e4ce85e5c7c50a9",
+      "bytes": 69606,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Pen actively rewrites work on a separate sheet; sleeve, laptop and papers preserve office continuity."
+    },
+    {
+      "key": "b1_after_work",
+      "title": "下班回到家",
+      "nodes": [
+        "B1_05"
+      ],
+      "sha256": "32155978af14ec79ad97b6f7e5167efed1545f85097e4d75de0289a22c46c44d",
+      "bytes": 102922,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Night interior arrival; bag is being put down, coat carried; manuscript not yet being read."
+    },
+    {
+      "key": "b1_pen_return",
+      "title": "又拿起了笔",
+      "nodes": [
+        "B1_07"
+      ],
+      "sha256": "9951ede8c22dcf7f774104bfdd0c79635a3adb2e6b01b10394f019ac9ac6e94d",
+      "bytes": 74664,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Literal pen returning to old manuscript; black knit, lamp and night window continue home scene; hands coherent."
+    },
+    {
+      "key": "b2_revision",
+      "title": "重新写开头",
+      "nodes": [
+        "B2_03"
+      ],
+      "sha256": "9050abaccad44ee8d58494233821c3387e0d2e1a649640e7bf326cadbce49161",
+      "bytes": 119574,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Crossed-out old opening and fresh writing show revision; night lamp and sleeve continue choice scene."
+    },
+    {
+      "key": "b2_rest",
+      "title": "今晚先收起来",
+      "nodes": [
+        "B2_04"
+      ],
+      "sha256": "dd3c7e7127d7c5b83b10188b1ab2b91e6a17dab40e43ff4f0842d313756483a7",
+      "bytes": 104750,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Clipped manuscript and note with pen put down show stopping for the evening; no writing hand."
+    },
+    {
+      "key": "b2_listener",
+      "title": "有人等你继续",
+      "nodes": [
+        "B2_07"
+      ],
+      "sha256": "d2d4ab260924a270cb2f86876e1449b262932ebef650616eae0849e09a5e3032",
+      "bytes": 99854,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Reverse angle of distinct bookshop listeners looking toward reader; shoulder/pages anchor eyeline and location."
+    },
+    {
+      "key": "b3_archive_detail",
+      "title": "顺着一条注释",
+      "nodes": [
+        "B3_03"
+      ],
+      "sha256": "b6d4b22dfe6fc12e734425150caa9c6a932a02f08a44154fd11cd438e7683390",
+      "bytes": 65008,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Finger follows a footnote among photocopies near shelves; no face; ordinary research materials rather than forged source."
+    },
+    {
+      "key": "b3_question",
+      "title": "把问题写具体",
+      "nodes": [
+        "B3_04"
+      ],
+      "sha256": "c39e14e530459abdf4d58e3aa3bd478eadff3024757934da41124132a6e8b209",
+      "bytes": 74266,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Hand rewrites a concrete research outline beside crossed-out notes; library materials and sleeve match."
+    },
+    {
+      "key": "b3_working",
+      "title": "慢慢查，慢慢写",
+      "nodes": [
+        "B3_05"
+      ],
+      "sha256": "9b9eb34141a67cec4c87039a119e9ce7363fcf3d5f8130890be9277538ce0779",
+      "bytes": 101004,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Wide library work scene gives time and space; lead small in frame actively taking notes."
+    },
+    {
+      "key": "b3_reply_write",
+      "title": "认真回信，再核一次",
+      "nodes": [
+        "B3_07"
+      ],
+      "sha256": "9ad3493eb71da872b851b77d801594b8e97f580372bdb315bda9939fa37bac35",
+      "bytes": 79688,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Reply sheet at side and pen following open reference page show checking after reply; bright library consistent."
+    },
+    {
+      "key": "b4_scope",
+      "title": "划清这次的范围",
+      "nodes": [
+        "B4_03"
+      ],
+      "sha256": "4affe3185dcbc768763b6e84c9599f0eff0199b75a8e89be53bed1c2564ea904",
+      "bytes": 58810,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Blue sleeve hand crosses out scope on meeting paper, colleague anchors page; literal changed plan."
+    },
+    {
+      "key": "b4_listen",
+      "title": "先听对方怎么说",
+      "nodes": [
+        "B4_04"
+      ],
+      "sha256": "29146b215072872a83f9aabb5ec1a3f3ad4dfc2a6e5846c8de060b970d31441c",
+      "bytes": 58660,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Reverse meeting angle retains blue-shirt lead, female colleague and bald colleague; another person explains while lead listens."
+    },
+    {
+      "key": "b4_delivered",
+      "title": "把该交的部分交出去",
+      "nodes": [
+        "B4_05"
+      ],
+      "sha256": "3ac57dcd50222716b745bd0b7a65e6021d448207939918f0f3aa6895ff2d8c18",
+      "bytes": 80418,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Folder passes between lead and colleague in same office; real handover replaces blocked meeting."
+    },
+    {
+      "key": "b4_close_notebook",
+      "title": "会议结束，把本子合上",
+      "nodes": [
+        "B4_07"
+      ],
+      "sha256": "2387690dd5537c44afe3fc5e3d66ae0296a6f9be196916f0a68d541864fe1475",
+      "bytes": 65094,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Black sleeve hand closes notebook with pen beside it; empty chairs support final quiet beat."
+    },
+    {
+      "key": "b5_cut_scope",
+      "title": "先做好最常用的功能",
+      "nodes": [
+        "B5_03"
+      ],
+      "sha256": "69aa0621a30ad3ad93bebfd9088fc8622998264b79fbe96b9bc42daa9ec82722",
+      "bytes": 59280,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Pen visibly crosses out most tasks next to face-down older phone; hands coherent and action distinct."
+    },
+    {
+      "key": "b7_autumn_steps",
+      "title": "秋天的脚步",
+      "nodes": [
+        "B7_06"
+      ],
+      "sha256": "76d9c131b45043463fcee7933906e81f2a71a1536aa55e1ff86831e43a5b88ec",
+      "bytes": 241530,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Version 2 inspected: gray sneakers and white soles now match wider next shot, with same dark trousers and gray top; natural forward step."
+    },
+    {
+      "key": "b3_letter_arrives",
+      "title": "读者来了一封信",
+      "nodes": [
+        "B3_06"
+      ],
+      "sha256": "f73f9936f904fed3f2c834521aa30834ecd60496f57568bd2313ac288b283375",
+      "bytes": 100534,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Upright reading pose with both hands on letter and natural downward eyeline; no reused head-on-hand composition."
+    },
+    {
+      "key": "b5_pending",
+      "title": "这一版，先做什么",
+      "nodes": [
+        "B5_02"
+      ],
+      "sha256": "bd977b05f534fdd43098d2ad185dfc2c119c2d8f949cd726164869fd9c47a991",
+      "bytes": 76744,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Neutral table before decision; two unmodified sketches, face-down older phone and laid-down pen do not pre-perform either choice."
+    },
+    {
+      "key": "b5_user_call",
+      "title": "听听用户怎么说",
+      "nodes": [
+        "B5_04"
+      ],
+      "sha256": "348495de928ed24a7b8cbb86fe35bdba141966dc9b4b48cda85999b573f9d760",
+      "bytes": 75424,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Phone held naturally during listening; adult side gaze coherent, black shirt and older phone fit 2017 office discussion."
+    },
+    {
+      "key": "b5_office_wide",
+      "title": "几年里，产品改了又改",
+      "nodes": [
+        "B5_05"
+      ],
+      "sha256": "582a1ae33dfcaabeb723c87b63242bbb8e1a9c6db73983a050872faa8b8a91f8",
+      "bytes": 104162,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Small team at separate workstations before receiving feedback; lead gaze down at work, no premature group celebration."
+    },
+    {
+      "key": "b6_scope",
+      "title": "圈出这一次要交的部分",
+      "nodes": [
+        "B6_04"
+      ],
+      "sha256": "1bc89791a41ff80ba8c4ca9a5cbd614d9ea6438c98fdfcc5246c8f2a39ba7230",
+      "bytes": 51890,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Hoodie sleeve and pen circle a limited part of the work diagram; coherent hands and colleague edge preserve discussion."
+    },
+    {
+      "key": "b6_listening",
+      "title": "听完同事的想法",
+      "nodes": [
+        "B6_06"
+      ],
+      "sha256": "ab570f8a3791b4e1001be6deb1cb8f484a76a42774fb9bfd53824d260a812df6",
+      "bytes": 78214,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Lead rests hands on chair while colleague explains; no pointing before listening. Gaze directed toward colleague."
+    },
+    {
+      "key": "b7_path_ahead",
+      "title": "再往前走一小段",
+      "nodes": [
+        "B7_07"
+      ],
+      "sha256": "7dc09ea32f1c1e5559a0fa0a70eab113cd317ec184061e324aa592f91dc748c4",
+      "bytes": 294808,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Wide rear walking shot shows continuing along autumn park path; gray sneakers and sweatshirt visible, no backward portrait gaze."
+    },
+    {
+      "key": "w_next_room",
+      "title": "起身，去下一场",
+      "nodes": [
+        "R0_END"
+      ],
+      "sha256": "3eecd13a52504545c4359e8b079e6de99a9ec8cd46016cdd3fb1559af496fd7d",
+      "bytes": 91082,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Adult stands and moves chair back in same backstage setting; side-back view and corridor support departure, eyes coherent."
+    },
+    {
+      "key": "h_post_manuscript",
+      "title": "把旧稿装进信封",
+      "nodes": [
+        "H03"
+      ],
+      "sha256": "74dcd8da73ae2b8e2bba2f2216d0923f127c85e515a59be667993c565c7690eb",
+      "bytes": 110702,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Blue-white school sleeves and both hands pack three manuscript sections into kraft envelope on established wooden desk; no repeated reading portrait."
+    },
+    {
+      "key": "b5_feedback_detail",
+      "title": "看到这条反馈",
+      "nodes": [
+        "B5_06"
+      ],
+      "sha256": "c83b3943ca284673543557df42241d768fd33eb866570d5c4ff2cf627cda5a1e",
+      "bytes": 64944,
+      "status": "image-and-phone-sequence-reviewed",
+      "notes": "Version 2 inspected: ordinary wide top notch replaces later pill hardware; blurred messages, hand grip and table preserved for 2021 feedback detail."
+    }
+  ],
+  "note": "生成重构，不是历史原照。退选的新版手机和不连续的鞋子已修订；实体手机尚未测试。"
+}

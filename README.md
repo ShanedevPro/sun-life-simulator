@@ -2,11 +2,11 @@
 
 一部可以重新选择的互动照片电影。从出生、求学到工作和创业，在重要的岔路口作出选择，再看看这段人生会走向哪里。
 
-手机竖屏优先，包含 **120 个剧情节点、52 张场景照片、7 次主要抉择和 8 个结局**。局部回应会改变眼前的经历，完整剧情图共有 15 条可玩路径；这不代表 15 个结局。现实路线写到 **2026 年 9 月 12 日**，其他人生为虚构。
+手机竖屏优先，包含 **120 个剧情节点、86 张场景照片、7 次主要抉择和 8 个结局**。局部回应会改变眼前的经历，完整剧情图共有 15 条可玩路径；这不代表 15 个结局。现实路线写到 **2026 年 9 月 12 日**，其他人生为虚构。
 
 **[在线试玩](https://shanedevpro.github.io/sun-life-simulator/)** · [GitHub 源码](https://github.com/ShanedevPro/sun-life-simulator)
 
-直接在浏览器打开即可，无需安装。2026 年 10 月 24 日已检查公开地址、全部八个结局和场景资源；也可以在本机启动。
+直接在浏览器打开即可，无需安装。也可以在本机启动。本轮改了毕业照的视线、重复镜头和动作画面，具体范围与检查结果见 [画面修订记录](docs/qa/visual-fix-20261025/README.md)。
 
 ## 怎么玩
 
@@ -56,13 +56,13 @@ pnpm exec playwright install chromium
 PLAYWRIGHT_CHANNEL=chromium PLAYTEST_URL=http://127.0.0.1:4173/ pnpm test:e2e
 ```
 
-实际检查结果和未验证项目见 [本次交付记录](docs/qa/full-game-20261024/README.md)。自动化通过、手机视口模拟、实体设备检查和真人阅读反馈分别记录。
+实际检查结果见 [画面修订记录](docs/qa/visual-fix-20261025/README.md)；首版记录保留在 [完整交付记录](docs/qa/full-game-20261024/README.md)。自动化通过、手机视口模拟、实体设备检查和真人阅读反馈分别记录。
 
 ## 内容与工程
 
 - [完整剧情数据](story/full-game.json)：正文、选项、章节、结局和素材键的唯一编辑源。
 - [完整剧本](story/FULL_SCRIPT.md) · [完整分镜表](story/FULL_SHOT_LIST.md) · [来源与事实边界](story/SOURCES_FULL.md)。
-- `story/approved-assets/` 保存审核选定的 WebP；构建将它们复制到 `public/assets/`，并生成 `src/story/content.json`。不要手工修改生成文件。
+- `story/approved-assets/` 保存审核选定的 WebP；构建将它们复制到 `public/assets/`，并生成 `src/story/content.json`。不要手工修改生成文件。编辑剧情后运行 `pnpm exec node scripts/render-full-story.mjs`，同步完整剧本和分镜表。
 - Phaser 呈现照片，React 呈现文字和按钮，独立剧情模块管理进度。照片按需加载，缓存有上限。
 
 公开源码包含构建所需的选定图片和剧情数据。全新克隆不需要作者私有的参考肖像、原始 PNG、研究下载或生成工具。缺少选定图片时，正式构建会失败，不会自动补上占位图。

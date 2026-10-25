@@ -4,7 +4,7 @@ const authored = JSON.parse(await fs.readFile('story/full-game.json', 'utf8'));
 const nodes = Object.fromEntries(authored.nodes.map((n: { id: string }) => [n.id, n]));
 const legacy = JSON.parse(await fs.readFile('src/story/legacy-v2.json', 'utf8'));
 
-const out = 'docs/qa/full-game-20261024/presentation';
+const out = `${process.env.PLAYTEST_OUTPUT ?? 'docs/qa/full-game-20261024'}/presentation`;
 const entry = process.env.PLAYTEST_URL ?? 'http://127.0.0.1:5173/';
 const frame = (page: Page) => page.locator('.game-frame');
 const sceneReady = (page: Page) => expect(frame(page)).toHaveAttribute('data-ready', 'true');

@@ -8,7 +8,7 @@ const graph: Record<string, Node> = Object.fromEntries(content.nodes.map((node: 
 const frame = (page: Page) => page.locator('.game-frame');
 const site = process.env.PLAYTEST_URL ?? 'http://127.0.0.1:5173/';
 const saveKey = 'sunge.life.v4';
-const out = 'docs/qa/full-ui-20261024';
+const out = process.env.PLAYTEST_OUTPUT ?? 'docs/qa/full-ui-20261024';
 async function ready(page: Page) {
   await expect(frame(page)).toHaveAttribute('data-ready', 'true');
   await expect(frame(page)).toHaveAttribute('data-reveal', 'complete');
