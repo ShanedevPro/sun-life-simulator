@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-25T13:06:01.006Z",
+  "codeCommit": "bb9d6337a55489280db44daac1ce59f8402803ac",
+  "status": "passed",
+  "files": [
+    {
+      "url": "https://shanedevpro.github.io/sun-life-simulator/assets/index-BcPbHse5.js",
+      "bytes": 308342,
+      "remoteSha256": "73719217d5194c4caeb9559e0a80fb488b7adb6da899f3f47c2762ade22c3e4c",
+      "localSha256": "73719217d5194c4caeb9559e0a80fb488b7adb6da899f3f47c2762ade22c3e4c",
+      "matches": true
+    },
+    {
+      "url": "https://shanedevpro.github.io/sun-life-simulator/assets/phaser-BsmXasWO.js",
+      "bytes": 1656683,
+      "remoteSha256": "0545340af6f038293e949c700a300cc92ebb62f7baabc8d8880ae9196eca1d64",
+      "localSha256": "0545340af6f038293e949c700a300cc92ebb62f7baabc8d8880ae9196eca1d64",
+      "matches": true
+    },
+    {
+      "url": "https://shanedevpro.github.io/sun-life-simulator/assets/index-BWKYTVEn.css",
+      "bytes": 20387,
+      "remoteSha256": "fbbd69245011e7c415da392db24c9fee5d1d0f6821900e2a94189e4bf117a288",
+      "localSha256": "fbbd69245011e7c415da392db24c9fee5d1d0f6821900e2a94189e4bf117a288",
+      "matches": true
+    }
+  ]
+}

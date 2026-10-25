@@ -34,7 +34,28 @@
     "pagesBaseBuild": "passed"
   },
   "public": {
-    "status": "pending"
+    "status": "passed",
+    "checkedAt": "2026-10-25T13:07:29.087Z",
+    "url": "https://shanedevpro.github.io/sun-life-simulator/",
+    "codeCommit": "bb9d6337a55489280db44daac1ce59f8402803ac",
+    "workflowRun": 40195396680,
+    "workflowUrl": "https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40195396680",
+    "ci": {
+      "unitTestsPassed": 15,
+      "browserTestsPassed": 32
+    },
+    "live": {
+      "passed": 2,
+      "failed": 0,
+      "scope": [
+        "seven desktop viewports",
+        "touch phone landscape and portrait rotation"
+      ],
+      "runtimeFilesMatched": 3,
+      "userTabRefreshed": true,
+      "savedPositionResumed": true
+    },
+    "storyAndSelectedImages": "unchanged from version 1.0.1"
   },
   "unverified": [
     "physical phones",
