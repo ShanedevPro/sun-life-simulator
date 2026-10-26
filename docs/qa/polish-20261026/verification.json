@@ -1,7 +1,7 @@
 {
   "date": "2026-10-26",
   "version": "1.1.0",
-  "status": "local-and-clean-source-passed; publication-pending",
+  "status": "published-and-verified",
   "content": {
     "nodes": 120,
     "scenePhotos": 108,
@@ -115,5 +115,49 @@
     "basePath": "/sun-life-simulator/",
     "build": "passed",
     "unitTests": 23
+  },
+  "public": {
+    "date": "2026-10-26T05:58:39.166Z",
+    "version": "1.1.0",
+    "status": "published-and-verified",
+    "url": "https://shanedevpro.github.io/sun-life-simulator/",
+    "repository": "https://github.com/ShanedevPro/sun-life-simulator",
+    "sourceCommit": "b41c3f2b54c5b0aa5c64157eb41047993c751e66",
+    "workflow": {
+      "id": 40275960848,
+      "url": "https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40275960848",
+      "conclusion": "success",
+      "unitTests": 23,
+      "browserTests": 37
+    },
+    "liveBrowser": {
+      "passed": 3,
+      "covers": [
+        "new/returning player and exact stored progress",
+        "About/focus/GitHub link",
+        "portrait, short desktop and touch rotation",
+        "formerly blank factual scene F07 uses a real photo"
+      ]
+    },
+    "photos": {
+      "checked": 108,
+      "allMatch": true
+    },
+    "runtime": {
+      "checked": 7,
+      "allMatch": true
+    },
+    "githubShowcase": {
+      "nativeBrowserVisuallyReviewed": true,
+      "posterAndThreeScreenshotsLoaded": true,
+      "briefCopyAndPlayLinkPresent": true
+    },
+    "userTab": {
+      "existingGameRefreshed": true,
+      "keptAtOpening": true,
+      "existingProgressNotAdvancedOrCleared": true
+    },
+    "physicalDeviceTested": false,
+    "humanReadingTimeMeasured": false
   }
 }
