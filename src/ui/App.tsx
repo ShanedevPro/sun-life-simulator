@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react';
 import { PhotoStage } from '../game/PhotoStage';
 import type { PhotoStatus } from '../game/PhotoScene';
-import { assets, openingAsset, nodes, isExit, chapters, decisions, endings, sources, type EndingId } from '../story/data';
+import { assets, openingAsset, nodes, isExit, isBlackTitle, chapters, decisions, endings, sources, type EndingId } from '../story/data';
+import { textForScene } from '../story/text';
 import { advance, newSave, rewind, type Save } from '../story/state';
 import { readSave, writeSave } from '../story/storage';
 import { Modal } from './Modal';
@@ -40,11 +41,10 @@ export function App() {
   const progress = save?.progress;
   const nodeId = screen === 'opening' ? 'opening' : progress?.nodeId ?? 'P01';
   const node = nodes[nodeId];
+  const sceneText = node ? textForScene(node, progress?.decisions) : EMPTY_TEXT;
   const ended = screen === 'story' && isExit(nodeId);
   const ending = node?.endingId ? endings[node.endingId] : undefined;
-  const intertitle = screen === 'story' && node?.kind === 'intertitle';
-  const firstLine = node?.text[0] ?? '';
-  const narrationCard = intertitle && !node.title && (Array.from(firstLine).length > 12 || /[。！？]$/.test(firstLine.trim()));
+  const intertitle = screen === 'story' && isBlackTitle(node);
   const chapterEnd = screen === 'story' && node?.kind === 'chapter-end';
   const chapter = node ? chapters[node.chapter] : undefined;
   const chapterName = chapter?.title ?? node?.chapter ?? '故事暂停了';
@@ -57,10 +57,11 @@ export function App() {
   const history = useMemo(() => progress?.trail.flatMap(id => nodes[id] ? [nodes[id]] : []) ?? [], [progress?.trail]);
   const reachedDecisions = useMemo(() => Object.values(decisions).filter(decision => Boolean(save?.checkpoints[decision.id])).sort((left, right) => left.id.localeCompare(right.id)), [save?.checkpoints]);
   const reachedSources = useMemo(() => [...new Set(history.flatMap(scene => scene.sources ?? []))].filter(id => Boolean(sources[id])), [history]);
+  const reachedSourceNotes = useMemo(() => history.filter(scene => Boolean(scene.sourceNote)), [history]);
   const endingCount = endingOrder.filter(id => Boolean(endings[id])).length;
   const reveal = useTextReveal({
-    sceneKey: `${screen}:${nodeId}`, text: node?.text ?? EMPTY_TEXT,
-    enabled: screen === 'story' && !ended && !intertitle && !chapterEnd,
+    sceneKey: `${screen}:${nodeId}`, text: sceneText,
+    enabled: screen === 'story' && !ended && !intertitle,
     ready, paused: menu !== null, instant: save?.textDisplay === 'instant',
   });
 
@@ -139,7 +140,7 @@ export function App() {
     setMenu(null); setMenuTrail([]); setScreen('story');
   }
   const classes = ['game-frame', save?.fontSize === 'large' && 'large-text', screen === 'opening' && 'opening-state',
-    (intertitle || chapterEnd) && 'black-state', ended && 'ending-state',
+    intertitle && 'black-state', chapterEnd && 'chapter-recap-state', ended && 'ending-state',
     node?.choices && screen === 'story' && 'choice-state', node?.kind === 'dialogue' && screen === 'story' && 'dialogue-state',
     menu && 'menu-open'].filter(Boolean).join(' ');
   const menuTitles: Record<Exclude<Menu, null>, string> = {
@@ -151,7 +152,7 @@ export function App() {
     <PhotoStage asset={asset} nodeId={nodeId} retry={retry} onStatus={onPhotoStatus} />
     <div className="photo-vignette" />
     <div className="underlay" inert={menu !== null}>
-      <span className="sr-only" aria-live="polite" aria-atomic="true">{screen === 'story' && ready && (ended || intertitle || chapterEnd) ? [ended ? ending?.title : node.title, ...node.text].filter(Boolean).join('。') : ''}</span>
+      <span className="sr-only" aria-live="polite" aria-atomic="true">{screen === 'story' && ready && (ended || intertitle) ? [ended ? ending?.title : node.title, ...sceneText].filter(Boolean).join('。') : ''}</span>
       {screen === 'opening' ? <div className={`opening-content ${!ready ? 'awaiting-photo' : ''}`}>
         <h1 className="opening-title" aria-label="孙哥的模拟人生"><span className="title-prefix">孙哥的</span><span className="title-name">模拟人生</span></h1>
         <section className="opening-panel" aria-label="故事菜单">
@@ -168,34 +169,35 @@ export function App() {
         </footer>
       </div> : <>
         <header className="game-header">
-          {!intertitle && !chapterEnd && !ended ? <span className={`scene-time ${!ready ? 'awaiting-photo' : ''}`}>{node.time}</span> : <span />}
+          {!intertitle && !ended ? <span className={`scene-time ${!ready ? 'awaiting-photo' : ''}`}>{node.time}</span> : <span />}
           <button className="icon-button pause-button" aria-label="暂停" data-focus-return disabled={busy && selection !== null} onClick={() => openMenu('pause')}><svg width="18" height="22" viewBox="0 0 18 22" aria-hidden="true"><path d="M5 4v14M13 4v14" stroke="currentColor" strokeWidth="2.5" /></svg></button>
         </header>
         {ended ? <section key={nodeId} className={`ending-panel state-enter ${!ready ? 'awaiting-photo' : ''}`} aria-label="人生结局">
           <div className="eyebrow">{ending?.historical ? '截至 2026 年 9 月 12 日' : `另一种人生 · ${node.time}`}</div>
           <h1 className="ending-title">{ending?.title ?? node.title ?? '这一段人生'}</h1>
-          <div className="ending-copy-group">{node.text.map((text, i) => <p className="ending-copy" key={i}>{text}</p>)}</div>
+          <div className="ending-copy-group">{sceneText.map((text, i) => <p className="ending-copy" key={i}>{text}</p>)}</div>
           <div className="ending-actions">
             {reachedDecisions.length ? <button ref={actionRef} className="primary-button" disabled={!ready || busy} onClick={() => openMenu('replay')}><Diamond />换个选择<Arrow /></button> : null}
             <div className="ending-secondary"><button className="text-button" onClick={() => openMenu('collection')}>走过的人生</button><button className="text-button" onClick={goHome}>回到片头</button></div>
           </div>
-        </section> : intertitle || chapterEnd ? <section key={nodeId} className={`intertitle state-enter ${chapterEnd ? 'chapter-recap' : ''} ${narrationCard ? 'narration-card' : ''} ${!ready ? 'awaiting-photo' : ''}`} aria-label="当前剧情">
+        </section> : intertitle ? <section key={nodeId} className={`intertitle state-enter ${!ready ? 'awaiting-photo' : ''}`} aria-label="当前剧情">
           <div className="intertitle-copy">
-            <div className="eyebrow">{narrationCard ? node.time : chapter?.period ?? node.time}</div>
-            {!narrationCard ? <h1>{node.title ?? (chapterEnd ? chapterName : node.text[0])}</h1> : null}
-            {(chapterEnd || node.title || narrationCard ? node.text : node.text.slice(1)).map((text, i) => <p key={i} className="intertitle-subtitle">{text}</p>)}
+            <div className="eyebrow">{chapter?.period ?? node.time}</div>
+            <h1>{node.title ?? sceneText[0]}</h1>
+            {(node.title ? sceneText : sceneText.slice(1)).map((text, i) => <p key={i} className="intertitle-subtitle">{text}</p>)}
             <div className="chapter-divider" />
             {node.caption ? <p className="intertitle-caption">{node.caption}</p> : null}
           </div>
           <button ref={actionRef} className="continue-button" disabled={!ready || busy} onClick={event => next(event)} aria-label="继续">轻触继续<Chevron /></button>
         </section> : <>
           {(!node.choices && !node.actionLabel) || !reveal.complete ? <button className="photo-advance" tabIndex={-1} aria-hidden="true" disabled={!ready || busy} onClick={event => next(event)} /> : null}
-          <section key={nodeId} className={`story-panel state-enter ${!ready ? 'awaiting-photo' : ''} ${node.choices || node.actionLabel ? 'has-actions' : ''}`} aria-label="当前剧情">
+          <section key={nodeId} className={`story-panel state-enter ${chapterEnd ? 'chapter-recap' : ''} ${!ready ? 'awaiting-photo' : ''} ${node.choices || node.actionLabel ? 'has-actions' : ''}`} aria-label="当前剧情">
             <div className="narrative-scroll" ref={contentRef} onClick={event => { if (!reveal.complete) next(event); }}>
+              {chapterEnd ? <h1 className="chapter-recap-title">{node.title ?? chapterName}</h1> : null}
               {node.routeNotice ? <p className="route-notice">{node.routeNotice}</p> : null}
               {node.speaker ? <div className="speaker">{node.speaker}{node.speakerPlacement === 'offscreen' ? <span> · 画外</span> : null}</div> : null}
               <div className="narrative">
-                <span className="sr-only" aria-live="polite" aria-atomic="true">{ready ? node.text.join('\n') : ''}</span>
+                <span className="sr-only" aria-live="polite" aria-atomic="true">{ready ? sceneText.join('\n') : ''}</span>
                 {reveal.paragraphs.map((chars, i) => {
                   const before = reveal.paragraphs.slice(0, i).reduce((count, line) => count + line.length, 0);
                   return <p key={i} className="reveal-text" aria-hidden="true">{chars.map((char, j) => <span key={j} className={before + j < reveal.visible ? 'revealed' : 'unrevealed'}>{char}</span>)}</p>;
@@ -236,7 +238,7 @@ export function App() {
       </> : null}
       {menu === 'history' ? <ol className="history-list">{history.map((scene, i) => {
         const selected = scene.choices?.find(choice => choice.id === progress?.decisions.find(decision => decision.nodeId === scene.id)?.choiceId);
-        return <li ref={i === history.length - 1 ? historyEnd : undefined} key={scene.id}><div className="history-time">{scene.time}{scene.speaker ? ` · ${scene.speaker}` : ''}</div>{scene.text.map((text, j) => <p key={j}>{text}</p>)}{scene.caption ? <p>{scene.caption}</p> : null}{selected ? <p className="history-choice">你选择了：{selected.label}</p> : null}</li>;
+        return <li ref={i === history.length - 1 ? historyEnd : undefined} key={scene.id}><div className="history-time">{scene.time}{scene.speaker ? ` · ${scene.speaker}` : ''}</div>{textForScene(scene, progress?.decisions).map((text, j) => <p key={j}>{text}</p>)}{scene.caption ? <p>{scene.caption}</p> : null}{selected ? <p className="history-choice">你选择了：{selected.label}</p> : null}</li>;
       })}</ol> : null}
       {menu === 'replay' ? <>
         <p className="sheet-intro">回到已经走过的岔路，再选一次。</p>
@@ -277,6 +279,7 @@ export function App() {
       {menu === 'sources' ? <div className="about-copy">
         <p>公开报道提供经历和时间。具体房间、动作、表情和对白由游戏重构，不是真实现场照片或逐字记录。</p>
         {reachedSources.length ? <ul className="source-list">{reachedSources.map(id => <li key={id}><a href={sources[id].url} target="_blank" rel="noreferrer">{sources[id].title} ↗</a></li>)}</ul> : <p>读到相关情节后，可以在这里查看对应报道。</p>}
+        {reachedSourceNotes.length ? <section className="source-notes" aria-label="已读情节的说明"><h3>情节说明</h3>{reachedSourceNotes.map(scene => <div className="source-note" key={scene.id}><div className="history-time">{scene.time}</div><p>{scene.sourceNote}</p></div>)}</section> : null}
       </div> : null}
     </Modal> : null}
   </main>;

@@ -1,0 +1,354 @@
+{
+  "date": "2026-10-26",
+  "status": "passed",
+  "newPhotos": 22,
+  "replacedPhotos": 1,
+  "records": [
+    {
+      "key": "p_admission_news",
+      "version": 1,
+      "nodes": [
+        "H10B"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 130526,
+      "sha256": "27cbf82c3a0bd5f2509f61d900cb9fdf36bba89d05c701fc9ce5358d935ec524",
+      "photoReview": "passed",
+      "notes": "同一高中房间与校服；下视纸张，未仿造录取证明。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_work_notes",
+      "version": 1,
+      "nodes": [
+        "A07"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 94756,
+      "sha256": "d2a368a337dd186711f1beb6e4ad42127af6455db930a645545729d7a76e5338",
+      "photoReview": "passed",
+      "notes": "收起笔记和纸张；青年眼神与抓握自然。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_hupan_class",
+      "version": 3,
+      "nodes": [
+        "C07"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 115002,
+      "sha256": "05217420da6afefbdcffea50b11833d215c2bb830c2075293f99339cae64410e",
+      "photoReview": "passed",
+      "notes": "v3保留正确下视与书写，换掉从办公室参考中复制的两位配角。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_published_book",
+      "version": 1,
+      "nodes": [
+        "C10"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 76710,
+      "sha256": "644ee9298bf7e7bb5bd0234c3e8940ad1ec09e64157ae88c688914cb987e3757",
+      "photoReview": "passed",
+      "notes": "新装订书与旧稿并置；书封不冒充真实出版物原照。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_office_corridor",
+      "version": 1,
+      "nodes": [
+        "C14"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 94962,
+      "sha256": "32e98cd27e59b0959028ba6c4194180a26341591da3e205b4b18de95c1741895",
+      "photoReview": "passed",
+      "notes": "同年代办公室走廊离开，提包与视线自然。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_auction_result",
+      "version": 2,
+      "nodes": [
+        "W02"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 86644,
+      "sha256": "a654a9ccf38bebd958aa3d11ba001ea4e095a7b5dc4cb0d1098d89d0c7c60ef6",
+      "photoReview": "passed",
+      "notes": "v2去掉手抵下巴的重复姿势；靠回椅背、双手分开，显示结果后的变化。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_news_city",
+      "version": 1,
+      "nodes": [
+        "W06"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 218516,
+      "sha256": "d5f2005d50fc0f1fd1c47d51d8cf2950de42d4824c392aa940982d0a3237784a",
+      "photoReview": "passed",
+      "notes": "2023城市办公楼空镜；匿名行人，无司法行为暗示。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_response_hands",
+      "version": 1,
+      "nodes": [
+        "W08"
+      ],
+      "width": 940,
+      "height": 1672,
+      "bytes": 72138,
+      "sha256": "da2ca6a879a29d3039d3a88da1f1d2fdaec8c018e640fa719969d15cbed1d300",
+      "photoReview": "passed",
+      "notes": "同一工作桌与西装袖口，手部输入；不伪造公开回应原帖。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_public_exit",
+      "version": 1,
+      "nodes": [
+        "W09"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 114330,
+      "sha256": "c7303a3c405d1b32b4d09bfe2684b7d447b9d43627101eaceed9610ec10f4916",
+      "photoReview": "passed",
+      "notes": "日常提包离开；延续2023服装，不演胜诉或逃离。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_case_read",
+      "version": 2,
+      "nodes": [
+        "F06"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 150352,
+      "sha256": "b26cd2866fa81e0600cb1e09b9c6ce513b10338b58d3bc10822ed17dae9b80b8",
+      "photoReview": "passed",
+      "notes": "v2修复错误的黑牛仔外套，保持深蓝西装与黑衬衣。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_case_detail",
+      "version": 1,
+      "nodes": [
+        "F07"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 74398,
+      "sha256": "d538dea0674e21036d1c6953e53fd41d75bf5beb40ac0c4d6dc85a4fed96273c",
+      "photoReview": "passed",
+      "notes": "跟随阅读镜头的同一桌面、衣袖与窗光，打印材料不可读。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_case_close",
+      "version": 1,
+      "nodes": [
+        "F08"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 106310,
+      "sha256": "1ae3508ff69e44a6505c2e869fdb7c60f895cc5943bdb74f8bf94af1b2f30346",
+      "photoReview": "passed",
+      "notes": "同房间合电脑、放下材料；表情克制，不演付款或庆祝。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_first_commute",
+      "version": 1,
+      "nodes": [
+        "B1_01"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 140124,
+      "sha256": "7785d91a7e97432beb75ff9002e2ee3a2161361aec11a9f7382087fa28357998",
+      "photoReview": "passed",
+      "notes": "侧后方进入普通办公楼，眼神、背包和同行者自然。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_writer_home",
+      "version": 1,
+      "nodes": [
+        "B2_01"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 130814,
+      "sha256": "4e4cd1d709096d3173cee3c5e58ab518e729e0d8c775dc05a77ba0fc0dc3f4ec",
+      "photoReview": "passed",
+      "notes": "2011晚归放下工作包，稿纸留在桌边；温暖光线有窗与台灯来源。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_writer_finished",
+      "version": 3,
+      "nodes": [
+        "B2_05"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 142288,
+      "sha256": "cc05086add0498bf563cf72c79977dacb8cb0e0acaa6cc48b447e8042d924fa6",
+      "photoReview": "passed",
+      "notes": "v3保留夹稿动作，使用模糊的中文字符纹理；排除空白纸和拉丁草写版本。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_research_reply",
+      "version": 1,
+      "nodes": [
+        "B3_01"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 100602,
+      "sha256": "cbb9742505558459441429e7672a1be147fd76a916355dafbff94a395d1af36e",
+      "photoReview": "passed",
+      "notes": "2013较厚电脑与房间环境，模糊邮件界面；不仿造名校拒信。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_partner_office",
+      "version": 1,
+      "nodes": [
+        "B4_01"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 81030,
+      "sha256": "9f4ab381613855e347462bf02fcbaa38e072fdb2c66c539b059fa63d2bfde349",
+      "photoReview": "passed",
+      "notes": "电话与业务笔记显示合作沟通；配角与主角不同。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_product_messages",
+      "version": 2,
+      "nodes": [
+        "B5_01"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 88454,
+      "sha256": "005a85611a7e3b3545042ffec4657dcea0c83204811686411d0d5ef93e7da8ab",
+      "photoReview": "passed",
+      "notes": "v2只修正纸面为聊天应用线框，保留2017手机、握持和模糊消息。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_auction_decline",
+      "version": 1,
+      "nodes": [
+        "B6_01"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 76920,
+      "sha256": "3b0b806771fb15bdc7a7239de2ce2706bded1d96f8fee4287aa40d7b81fcdadd",
+      "photoReview": "passed",
+      "notes": "浅蓝衣袖合电脑，手机放开；不演永久退出。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_decline_invite",
+      "version": 1,
+      "nodes": [
+        "B6_05"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 68910,
+      "sha256": "fce6a129aaa133aa586dfef3d95da48181ba11c423a99177ee952939b472e3ad",
+      "photoReview": "passed",
+      "notes": "夜间黑连帽衣袖，手机朝下放回桌边；不伪造邀约。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_handover",
+      "version": 1,
+      "nodes": [
+        "B7_01"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 131588,
+      "sha256": "96cfaf9ba336cb4dc26ff1754c4771adc3c92ebf34b876f490756ebebfc0fd2b",
+      "photoReview": "passed",
+      "notes": "灰色便服交接普通资料，接收同事面孔明显不同。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "p_autumn_reply",
+      "version": 1,
+      "nodes": [
+        "B7_05"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 160568,
+      "sha256": "1a06b0d4760ea47d9f96dca2d036373417c0e43e3974793e2fcb014be1f5d5f2",
+      "photoReview": "passed",
+      "notes": "同一灰衣与房间，回复后放开手机；前景落叶偏布景感，属于轻微风格限制。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    },
+    {
+      "key": "b5_pending",
+      "version": 1,
+      "nodes": [
+        "B5_02"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 100200,
+      "sha256": "4791cb251ab86820f8714c73f8db804e50d81b85c2ff937275bf3d8897b27100",
+      "photoReview": "passed",
+      "notes": "修正原有硬件工程图为聊天应用线框；作选择前没有勾选或划掉项目。",
+      "sequenceReview": "passed",
+      "phoneReview": "passed"
+    }
+  ],
+  "reviewMethod": "Root逐图检查全部23幅选定图；实际浏览器截图在390标准与320大字下各覆盖120幕。Root审现实路线连续片，独立代理审七条平行路线及补充回应。"
+}

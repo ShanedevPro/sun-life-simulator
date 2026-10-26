@@ -1,9 +1,10 @@
 import { test, expect, type Page } from '@playwright/test';
 import fs from 'node:fs/promises';
+import { textForScene } from '../../src/story/text';
 
 const content = JSON.parse(await fs.readFile('story/full-game.json', 'utf8'));
 type Choice = { id: string; label: string; to: string; route?: string };
-type Node = { id: string; kind: string; next?: string; choices?: Choice[]; actionLabel?: string; decisionId?: string; endingId?: string; sources?: string[] };
+type Node = { id: string; kind: string; text: string[]; time: string; asset: string | null; next?: string; choices?: Choice[]; actionLabel?: string; decisionId?: string; endingId?: string; sources?: string[]; sourceNote?: string; textVariants?: { nodeId: string; byChoice: Record<string, string[]> } };
 const graph: Record<string, Node> = Object.fromEntries(content.nodes.map((node: Node) => [node.id, node]));
 const frame = (page: Page) => page.locator('.game-frame');
 const site = process.env.PLAYTEST_URL ?? 'http://127.0.0.1:5173/';
@@ -242,17 +243,17 @@ test('all choice scenes stay readable with large text on the shortest phone', as
   }
 });
 
-test('long black narration uses reading text and keeps continuation visible', async ({ page }) => {
+test('factual narration has its own photo and keeps continuation visible', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await seedAt(page, 'F07', true);
   const scene = content.nodes.find((node: Node) => node.id === 'F07');
   for (const size of [{ width: 390, height: 844 }, { width: 320, height: 568 }]) {
     await page.setViewportSize(size); await ready(page);
-    await expect(page.locator('.narration-card')).toBeVisible();
-    await expect(page.locator('.intertitle h1')).toHaveCount(0);
-    await expect(page.locator('.intertitle .eyebrow')).toHaveText(scene.time);
-    await expect(page.locator('.intertitle-subtitle')).toHaveText(scene.text);
-    const paragraphs = page.locator('.intertitle-subtitle');
+    await expect(frame(page)).not.toHaveClass(/black-state/);
+    await expect(page.locator('.story-panel')).toBeVisible();
+    await expect(page.locator('.scene-time')).toHaveText(scene.time);
+    await expect(page.locator('.reveal-text')).toHaveText(scene.text);
+    const paragraphs = page.locator('.reveal-text');
     for (const paragraph of await paragraphs.all()) {
       expect(await paragraph.evaluate(element => getComputedStyle(element).fontSize)).toBe('24px');
     }
@@ -262,6 +263,79 @@ test('long black narration uses reading text and keeps continuation visible', as
   }
   await step(page); await ready(page);
   await expect(frame(page)).toHaveAttribute('data-node', graph.F07.next!);
+});
+
+test('photo chapter recaps retain v4 progress, readable subtitles and continuation', async ({ browser }) => {
+  for (const target of ['U01', 'W09']) {
+    const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
+    try {
+      const page = await context.newPage();
+      await seedAt(page, target, true);
+      for (const size of [{ width: 390, height: 844 }, { width: 320, height: 568 }, { width: 943, height: 421 }]) {
+        await page.setViewportSize(size); await ready(page);
+        await expect(frame(page)).not.toHaveClass(/black-state/);
+        await expect(page.locator('.story-panel.chapter-recap')).toBeVisible();
+        await expect(page.locator('.scene-time')).toHaveText(graph[target].time);
+        await expect(page.locator('.reveal-text')).toHaveText(graph[target].text);
+        expect(graph[target].asset).toBeTruthy();
+        await expect(page.getByRole('button', { name: '继续', exact: true })).toBeInViewport();
+        expect(await page.locator('.narrative-scroll').evaluate(element => element.scrollHeight <= element.clientHeight + 1)).toBe(true);
+        if (size.width === 320) {
+          const photo = (await page.locator('.photo-stage').boundingBox())!;
+          const panel = (await page.locator('.story-panel').boundingBox())!;
+          expect(photo.y + photo.height).toBeLessThanOrEqual(panel.y + 1);
+        }
+        await shot(page, `17-photo-recap-${target}-${size.width}x${size.height}`);
+      }
+      const before = await page.evaluate(key => JSON.parse(localStorage.getItem(key)!), saveKey);
+      await page.reload(); await ready(page);
+      await page.getByRole('button', { name: '继续故事', exact: true }).click(); await ready(page);
+      await expect(frame(page)).toHaveAttribute('data-node', target);
+      expect(await page.evaluate(key => JSON.parse(localStorage.getItem(key)!), saveKey)).toEqual(before);
+      await step(page); await ready(page);
+      await expect(frame(page)).toHaveAttribute('data-node', graph[target].next!);
+    } finally { await context.close(); }
+  }
+});
+
+test('both local responses reach their own ending text, accessible announcement and history', async ({ browser }) => {
+  const callback = Object.values(graph).find(node => node.kind === 'ending' && node.textVariants && Object.keys(node.textVariants.byChoice).length === 2);
+  expect(callback, 'an ending callback must respond to both local choices').toBeTruthy();
+  const source = graph[callback!.textVariants!.nodeId];
+  for (const choice of source.choices!) {
+    const context = await browser.newContext({ reducedMotion: 'reduce' });
+    try {
+      const page = await context.newPage();
+      await seedAt(page, source.id);
+      await page.getByRole('button', { name: choice.label, exact: true }).click(); await ready(page);
+      expect(await walkToEnd(page)).toBe(callback!.endingId);
+      await expect(frame(page)).toHaveAttribute('data-node', callback!.id);
+      const expected = textForScene(callback!, [{ nodeId: source.id, choiceId: choice.id }]);
+      await expect(page.locator('.ending-copy')).toHaveText(expected);
+      await expect(page.locator('.underlay > .sr-only[aria-live]')).toHaveText([content.endings[callback!.endingId!].title, ...expected].join('。'));
+      await page.getByRole('button', { name: '暂停', exact: true }).click();
+      await page.getByRole('button', { name: '剧情回看', exact: true }).click();
+      await expect(page.locator('.history-list li').last().locator('p')).toHaveText(expected);
+    } finally { await context.close(); }
+  }
+});
+
+test('scene source notes appear only in sources for reached scenes', async ({ page }) => {
+  const target = Object.values(graph).find(node => node.sourceNote);
+  expect(target, 'the script must provide context for sensitive factual scenes').toBeTruthy();
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await seedAt(page, target!.id);
+  await expect(page.locator('.underlay')).not.toContainText(target!.sourceNote!);
+  await page.getByRole('button', { name: '暂停', exact: true }).click();
+  await page.getByRole('button', { name: '设置', exact: true }).click();
+  await page.getByRole('button', { name: '关于这段人生', exact: true }).click();
+  await page.getByRole('button', { name: '查看已读情节的来源', exact: true }).click();
+  const reached = pathTo(target!.id)!;
+  const notes = reached.flatMap(id => graph[id].sourceNote ? [graph[id].sourceNote!] : []);
+  await expect(page.locator('.source-note p')).toHaveText(notes);
+  for (const scene of Object.values(graph).filter(node => node.sourceNote && !reached.includes(node.id))) {
+    await expect(page.getByRole('dialog')).not.toContainText(scene.sourceNote!);
+  }
 });
 
 test('desktop windows retain a centered portrait frame and contain their controls', async ({ page }) => {

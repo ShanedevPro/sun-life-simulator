@@ -1,10 +1,10 @@
 # Agent 部署说明
 
-更新：2026-10-25。本文对应完整游戏：120 个剧情节点、86 张照片、7 次主要抉择、8 个结局和 15 条完整路径。现实路线截至 2026 年 9 月 12 日。目标阅读时长为 10–15 分钟，尚未真人计时；本轮画面修订与检查范围见 [画面修订记录](docs/qa/visual-fix-20261025/README.md)，首版记录见 [完整交付记录](docs/qa/full-game-20261024/README.md)。
+更新：2026-10-26。完整游戏包含120个剧情节点、108张场景照片、7次主要抉择、8个结局和15条完整路径，另有独立片头封面。现实路线截至2026年9月12日；10–15分钟仍是未经过真人计时的阅读目标。
 
 **[在线试玩](https://shanedevpro.github.io/sun-life-simulator/)** · [公开仓库](https://github.com/ShanedevPro/sun-life-simulator)
 
-当前版本为 1.0.3，于 2026-10-25 完成实际 HTTPS 检查。游戏名为「孙哥的模拟人生」，首页采用独立的无字封面，增加 GitHub 入口。网站代码来自提交 `53f4478eae2b3023819dace216ab287d39a41d67`；[发布工作流](https://github.com/ShanedevPro/sun-life-simulator/actions/runs/40199098559) 成功，15 项单元测试和 34 项浏览器测试通过。公开首页的开始、续读、关于、链接、桌面/手机布局，以及封面、字体和三个运行文件均已核对，见 [首页改版记录](docs/qa/homepage-20261025/README.md)。86 张剧情照片与剧情节点沿用上一版；逐图记录和此前的 [比例修订记录](docs/qa/layout-fix-20261025/README.md) 保留。后续文档提交只补充验收结果，不替换已部署的运行产物。
+1.1.0补齐22幅叙事照片、修正一幅应用草图，保留三个短章节黑场。七条平行人生的结尾会呼应之前的回应，节点、连接、选择和v4存档结构保持不变。本轮构建、浏览器检查、图片审查及真实发布提交统一记录在[本轮交付记录](docs/qa/polish-20261026/README.md)；此前的[首页记录](docs/qa/homepage-20261025/README.md)、[画面修订](docs/qa/visual-fix-20261025/README.md)和[比例修订](docs/qa/layout-fix-20261025/README.md)保留，不能用旧版本结果代替本轮验收。
 
 ## 1. 接手时先确认
 
@@ -59,7 +59,7 @@ CI 使用 `pnpm exec playwright install --with-deps chromium` 安装浏览器和
 
 `pnpm assets` 和 `pnpm build` 从 `story/approved-assets/<素材键>.webp` 读取选定图片，生成 `public/assets/` 和 `src/story/content.json`。正式构建要求图片齐全；不会调用生图服务、读取私有肖像或用旧图偷偷替代缺失素材。公开源码必须包含全部选定 WebP、剧情源、旧版本迁移图、锁文件、运行代码、测试、配置和许可文件。
 
-独立片头封面为 `public/title-screen.webp`，必须随源码和产物一起保留。它与剧情照片分别管理，首页标题和菜单使用真实文字及按钮。当前游戏名为「孙哥的模拟人生」；仓库名与 `sunge.life.v4` 存档键继续使用原标识，已有地址和进度仍可使用。
+独立片头封面为 `public/title-lives.webp`，必须随源码和产物一起保留。它与剧情照片分别管理，首页标题和菜单使用真实文字及按钮。当前游戏名为「孙哥的模拟人生」；仓库名与 `sunge.life.v4` 存档键继续使用原标识，已有地址和进度仍可使用。
 
 全新克隆验收要在新目录执行上述安装、内容检查、测试和构建，确认不依赖原工作区的生成文件或未发布 PNG。不要只在长期使用的 `node_modules` 和 `public/assets` 上声称可复现。
 

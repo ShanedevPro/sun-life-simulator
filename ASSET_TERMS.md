@@ -4,7 +4,7 @@
 
 游戏中的场景图片是为本游戏生成的重构画面，人物对白经过改编；平行路线为虚构。图片不能作为新闻现场、本人言论或历史文件的证据。
 
-独立片头封面 `public/title-screen.webp` 也属于上述生成重构图片，适用相同的使用说明。首页的播放、GitHub 和星形图标来自 Bootstrap Icons，其 MIT 许可保存在 `docs/licenses/bootstrap-icons-MIT.txt` 和发布包的 `THIRD_PARTY_NOTICES.txt` 中。
+独立片头封面 `public/title-lives.webp` 与 `docs/media/` 中的宣传海报，也属于上述生成重构图片，适用相同的使用说明；实机截图展示本游戏的实际界面。首页的播放、GitHub 和星形图标来自 Bootstrap Icons，其 MIT 许可保存在 `docs/licenses/bootstrap-icons-MIT.txt` 和发布包的 `THIRD_PARTY_NOTICES.txt` 中。
 
 首页标题和菜单嵌入 Noto Serif SC 的少量所需字形，使不同设备上的字形保持一致。该字体使用 SIL Open Font License 1.1，完整许可保存在 `docs/licenses/noto-serif-sc-OFL.txt` 和发布包的 `THIRD_PARTY_NOTICES.txt` 中。
 

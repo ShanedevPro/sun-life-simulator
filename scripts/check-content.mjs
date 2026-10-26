@@ -1,11 +1,66 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(import.meta.dirname, '..');
+const blackTitleIds = JSON.parse(await fs.readFile(path.join(root, 'src/story/black-titles.json'), 'utf8'));
+const unfinished = /待续|TODO|PLACEHOLDER|敬请期待/iu;
+
+export function validateSceneText(story) {
+  const nodes = Object.fromEntries(story.nodes.map(node => [node.id, node]));
+  const problems = [];
+  const demand = (ok, message) => { if (!ok) problems.push(message); };
+  const paragraphs = (text, label) => {
+    const valid = Array.isArray(text) && text.length > 0 && text.length <= 2;
+    demand(valid, `Missing/long paragraph structure ${label}`);
+    if (!Array.isArray(text)) return;
+    demand(text.every(line => typeof line === 'string' && line.trim().length > 0 && Array.from(line).length <= 160), `Empty/overlong text ${label}`);
+    demand(!unfinished.test(text.join('')), `Unfinished text ${label}`);
+  };
+  const canReach = (from, target, visited = new Set()) => {
+    if (from === target) return true;
+    if (!nodes[from] || visited.has(from)) return false;
+    visited.add(from);
+    return (nodes[from].choices?.map(choice => choice.to) ?? [nodes[from].next]).some(next => next && canReach(next, target, visited));
+  };
+  for (const node of story.nodes) {
+    paragraphs(node.text, node.id);
+    const black = blackTitleIds.includes(node.id);
+    if (!node.asset) demand(black && node.asset === null && node.kind === 'intertitle', `Unintentional black scene ${node.id}`);
+    if (node.kind === 'intertitle' || black) {
+      demand(black && node.kind === 'intertitle' && node.asset === null, `Only approved title cards may use intertitle: ${node.id}`);
+      demand(Array.isArray(node.text) && node.text.length === 1 && typeof node.text[0] === 'string' && Array.from(node.text[0]).length <= 12 && (node.title === undefined || typeof node.title === 'string' && Array.from(node.title).length <= 12) && !node.caption && !node.choices && !node.speaker && !node.textVariants, `Black card must be a short chapter title ${node.id}`);
+    }
+    if (node.sourceNote !== undefined) {
+      demand(typeof node.sourceNote === 'string' && node.sourceNote.trim().length > 0 && Array.from(node.sourceNote).length <= 600 && !unfinished.test(node.sourceNote), `Invalid sourceNote ${node.id}`);
+    }
+    if (node.textVariants === undefined) continue;
+    const variants = node.textVariants;
+    if (!variants || typeof variants !== 'object' || Array.isArray(variants)) {
+      problems.push(`Invalid textVariants ${node.id}`); continue;
+    }
+    const source = nodes[variants.nodeId];
+    demand(Boolean(source?.choices?.length) && source.id !== node.id, `Invalid variant source ${node.id}: ${variants.nodeId}`);
+    const byChoice = variants.byChoice;
+    if (!byChoice || typeof byChoice !== 'object' || Array.isArray(byChoice) || !Object.keys(byChoice).length) {
+      problems.push(`Missing choice variants ${node.id}`); continue;
+    }
+    for (const [choiceId, text] of Object.entries(byChoice)) {
+      const choice = source?.choices?.find(value => value.id === choiceId);
+      demand(Boolean(choice), `Unknown variant choice ${node.id}: ${choiceId}`);
+      if (choice) demand(canReach(choice.to, node.id), `Variant choice cannot lead to scene ${node.id}: ${choiceId}`);
+      paragraphs(text, `${node.id}/${choiceId}`);
+    }
+  }
+  for (const id of blackTitleIds) demand(Boolean(nodes[id]), `Missing approved title card ${id}`);
+  return problems;
+}
+
+async function main() {
 const draft = process.argv.includes('--draft');
 const story = JSON.parse(await fs.readFile(path.join(root, 'story/full-game.json'), 'utf8'));
 const nodes = Object.fromEntries(story.nodes.map(n => [n.id, n]));
-const problems = [], warnings = [], reached = new Set(), terminal = new Set();
+const problems = validateSceneText(story), warnings = [], reached = new Set(), terminal = new Set();
 const demand = (ok, message) => { if (!ok) problems.push(message); };
 demand(story.nodes.length === Object.keys(nodes).length, 'Duplicate scene IDs');
 demand(Object.keys(story.decisions).length === 7, 'Expected seven major choices');
@@ -18,9 +73,6 @@ function visit(id) {
   if (!n) { problems.push(`Missing destination ${id}`); return; }
   reached.add(id); stack.add(id);
   demand(Boolean(story.chapters[n.chapter]), `Unknown chapter ${id}: ${n.chapter}`);
-  demand(Array.isArray(n.text) && n.text.length > 0 && n.text.length <= 2, `Missing/long paragraph structure ${id}`);
-  demand(n.text.every(t => typeof t === 'string' && t.length <= 160), `Overlong text ${id}`);
-  demand(!n.text.join('').match(/待续|TODO|PLACEHOLDER|敬请期待/iu), `Unfinished text ${id}`);
   if (n.asset) demand(Boolean(story.assets[n.asset]), `Unknown asset ${id}: ${n.asset}`);
   for (const source of n.sources ?? []) demand(Boolean(story.sources[source]), `Unknown source ${id}: ${source}`);
   if (n.kind === 'ending') {
@@ -73,3 +125,6 @@ if (process.argv.includes('--report')) {
   await fs.writeFile(path.join(folder, 'route-paths.json'), JSON.stringify(routes, null, 2) + '\n');
 }
 if (problems.length) process.exitCode = 1;
+}
+
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await main();

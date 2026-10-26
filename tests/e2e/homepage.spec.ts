@@ -27,7 +27,7 @@ test('the title screen starts, resumes, explains the adaptation and links to Git
   await expect(github).toHaveAttribute('href', 'https://github.com/ShanedevPro/sun-life-simulator');
   await expect(github).toHaveAttribute('target', '_blank');
   await expect(github).toHaveAttribute('rel', 'noopener noreferrer');
-  await expect(page.locator('link[rel="preload"][as="image"]')).toHaveAttribute('href', /title-screen\.webp$/);
+  await expect(page.locator('link[rel="preload"][as="image"]')).toHaveAttribute('href', /title-lives\.webp$/);
   await shot(page, '01-new-player');
   await page.getByRole('button', { name: '关于', exact: true }).click();
   await expect(page.getByRole('dialog')).toContainText('场景照片为重构，人物对白经过改编');

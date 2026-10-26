@@ -1,5 +1,6 @@
 /// <reference types="vite/client" />
 import rawContent from './content.json';
+import blackTitles from './black-titles.json';
 
 export type EndingId = 'R0' | 'B1' | 'B2' | 'B3' | 'B4' | 'B5' | 'B6' | 'B7';
 export type ChapterRoute = EndingId;
@@ -9,6 +10,8 @@ export type StoryNode = {
   text: string[]; next?: string; choices?: Choice[]; speaker?: string; routeNotice?: string;
   actionLabel?: string; caption?: string; title?: string; sources?: string[]; decisionId?: string; checkpoint?: boolean; endingId?: EndingId;
   speakerPlacement?: 'onscreen' | 'offscreen';
+  textVariants?: { nodeId: string; byChoice: Record<string, string[]> };
+  sourceNote?: string;
 };
 export type Chapter = { id: string; title: string; period: string; order: number };
 export type StoryDecision = { id: string; nodeId: string; title: string; time: string; asset: string };
@@ -19,7 +22,7 @@ export const nodes = Object.fromEntries(content.nodes.map(n => [n.id, n]));
 export const openingAsset = 'opening_cover';
 export const assets: Content['assets'] = {
   ...Object.fromEntries(Object.entries(content.assets).map(([key, asset]) => [key, { ...asset, url: `${import.meta.env.BASE_URL}${asset.url.replace(/^\/+/, '')}` }])),
-  [openingAsset]: { url: `${import.meta.env.BASE_URL}title-screen.webp`, title: '片头封面' },
+  [openingAsset]: { url: `${import.meta.env.BASE_URL}title-lives.webp`, title: '片头封面' },
 };
 export const chapters = content.chapters ?? {};
 export const decisions = content.decisions ?? {};
@@ -28,6 +31,8 @@ export const sources = content.sources ?? {};
 export const startId = content.start;
 export const exits = Object.values(endings).map(e => e.nodeId);
 export const isExit = (id: string): boolean => nodes[id]?.kind === 'ending';
+export const blackTitleIds: readonly string[] = blackTitles;
+export const isBlackTitle = (node: StoryNode | undefined): boolean => Boolean(node && node.asset === null && node.kind === 'intertitle' && blackTitleIds.includes(node.id));
 export const upcomingAssets = (id: string): string[] => {
   const seen = new Set<string>();
   const result = new Set<string>();

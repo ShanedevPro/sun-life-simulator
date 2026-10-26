@@ -212,10 +212,11 @@
       "shot": "校园步道上的人物四分之三中景。17岁阶段主角戴眼镜、背双肩包，双手在口袋里望向旁侧；秋叶、自行车与校园建筑可辨。实际是停留观察，不是远景行走。",
       "selectedShot": "校园步道上的人物四分之三中景。17岁阶段主角戴眼镜、背双肩包，双手在口袋里望向旁侧；秋叶、自行车与校园建筑可辨。实际是停留观察，不是远景行走。",
       "uses": [
+        "U01",
         "U02"
       ],
       "reviewStatus": "selected-image-review; sequence-ui-review-recorded-separately",
-      "reuseReason": "专用于这一幕。"
+      "reuseReason": "同一2007年秋到达校园的连续场景；U01短过场、U02交代专业，不重述高中比赛与行李。"
     },
     "u_desk": {
       "file": "approved-assets/u_desk.webp",
@@ -611,7 +612,7 @@
         "B6_07"
       ],
       "reviewStatus": "selected-image-review; sequence-ui-review-recorded-separately",
-      "reuseReason": "B6_02 建立团队讨论，B6_07 回到同一桌边明确指向纸张；中间用新动作、时间黑场和倾听镜头区分。"
+      "reuseReason": "B6_02建立团队讨论，B6_07回到同一桌边指向纸张；中间用处理分工、拒绝邀约和倾听镜头区分，是刻意返回同一次工作讨论。"
     },
     "b6_close": {
       "file": "approved-assets/b6_close.webp",
@@ -1235,13 +1236,365 @@
       "year": 2017,
       "location": "平行人生·产品工作桌",
       "age": 27,
-      "shot": "产品讨论前的桌面俯侧镜头，旧手机、两份待讨论草图和放下的笔并置，还没有删改或打电话。",
-      "selectedShot": "产品讨论前的桌面俯侧镜头，旧手机、两份待讨论草图和放下的笔并置，还没有删改或打电话。",
+      "shot": "无人桌面近景。年代合适的手机背面朝上放在桌边；纸上是聊天应用的简略界面线框与气泡，不是手机硬件工程图。没有勾选、划掉功能或提前表示已作选择。",
+      "selectedShot": "无人桌面近景。年代合适的手机背面朝上放在桌边；纸上是聊天应用的简略界面线框与气泡，不是手机硬件工程图。没有勾选、划掉功能或提前表示已作选择。",
       "uses": [
         "B5_02"
       ],
-      "reviewStatus": "visual-fix-20261025; image-reviewed; sequence-ui-evidence-in-qa",
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
       "reuseReason": "专用于这一幕。"
+    },
+    "p_admission_news": {
+      "file": "approved-assets/p_admission_news.webp",
+      "title": "新的升学机会",
+      "role": "纪实风格场景重构；不是历史原照",
+      "year": "2007 年初",
+      "location": "惠州·书桌",
+      "age": 16,
+      "shot": "蓝白校服少年在同一高中房间读普通纸质材料，侧面中景，眼睛朝下；旁边留着练习册，纸上不显示假录取内容。",
+      "referenceAsset": "h_invitation",
+      "uses": [
+        "H10B"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "蓝白校服少年在同一高中房间读普通纸质材料，侧面中景，眼睛朝下；旁边留着练习册，纸上不显示假录取内容。"
+    },
+    "p_work_notes": {
+      "file": "approved-assets/p_work_notes.webp",
+      "title": "收好一天的笔记",
+      "role": "纪实风格场景重构；不是历史原照",
+      "year": "2013 年底",
+      "location": "行业办公室",
+      "age": 23,
+      "shot": "同一青年在下班时收起工作桌边的笔记和纸张，侧后方中远景，电脑仍在；不是又一次对镜解释业务。",
+      "referenceAsset": "c_payment",
+      "uses": [
+        "A07"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "同一青年在下班时收起工作桌边的笔记和纸张，侧后方中远景，电脑仍在；不是又一次对镜解释业务。"
+    },
+    "p_hupan_class": {
+      "file": "approved-assets/p_hupan_class.webp",
+      "title": "课堂里的问题",
+      "role": "纪实风格场景重构；不是历史原照",
+      "year": "2015 年",
+      "location": "湖畔学习场景重构",
+      "age": 25,
+      "shot": "传统深木色教室与木桌椅中，青年坐在面貌各异的成年学员间低头记问题；不出现名人私人授课特写。",
+      "referenceAsset": "c_team",
+      "uses": [
+        "C07"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "传统深木色教室与木桌椅中，青年坐在面貌各异的成年学员间低头记问题；不出现名人私人授课特写。"
+    },
+    "p_published_book": {
+      "file": "approved-assets/p_published_book.webp",
+      "title": "新书与旧稿",
+      "role": "纪实风格场景重构；不是历史原照",
+      "year": "2017 年",
+      "location": "工作桌·书与旧稿",
+      "age": 26,
+      "shot": "手部近景：普通新装订书与保留旧稿并置，手把书放到桌边；不伪造可读书封、销量、签章或出版通知。",
+      "referenceAsset": "c_tron_start",
+      "uses": [
+        "C10"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "手部近景：普通新装订书与保留旧稿并置，手把书放到桌边；不伪造可读书封、销量、签章或出版通知。"
+    },
+    "p_office_corridor": {
+      "file": "approved-assets/p_office_corridor.webp",
+      "title": "离开工作桌",
+      "role": "纪实风格场景重构；不是历史原照",
+      "year": "2018 年底",
+      "location": "办公室外走廊",
+      "age": 28,
+      "shot": "深色外套成年主角提工作包走出办公室，侧后方中远景；门内工作桌、门外走廊延续普通日常。",
+      "referenceAsset": "c_bittorrent",
+      "uses": [
+        "C14"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "深色外套成年主角提工作包走出办公室，侧后方中远景；门内工作桌、门外走廊延续普通日常。"
+    },
+    "p_auction_result": {
+      "file": "approved-assets/p_auction_result.webp",
+      "title": "竞拍结果",
+      "role": "纪实风格场景重构；不是历史原照",
+      "year": "2019 年6月",
+      "location": "办公室",
+      "age": 28,
+      "shot": "浅蓝衬衫主角确认电脑结果后轻靠椅背，克制的意外与满足；与竞拍前不同角度，屏幕不显示生成金额。",
+      "referenceAsset": "w_auction",
+      "uses": [
+        "W02"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "浅蓝衬衫主角确认电脑结果后轻靠椅背，克制的意外与满足；与竞拍前不同角度，屏幕不显示生成金额。"
+    },
+    "p_news_city": {
+      "file": "approved-assets/p_news_city.webp",
+      "title": "三年以后",
+      "role": "纪实风格场景重构；不是历史原照",
+      "year": "2023 年3月",
+      "location": "城市·办公楼外",
+      "age": 32,
+      "shot": "阴天办公楼外的环境镜头，行人很小，无清晰主角、可读新闻屏幕或司法场景；承接三年时间跳跃。",
+      "referenceAsset": "w_response_desk",
+      "uses": [
+        "W06"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "阴天办公楼外的环境镜头，行人很小，无清晰主角、可读新闻屏幕或司法场景；承接三年时间跳跃。"
+    },
+    "p_response_hands": {
+      "file": "approved-assets/p_response_hands.webp",
+      "title": "发出回应",
+      "role": "纪实风格场景重构；不是历史原照",
+      "year": "2023 年3月",
+      "location": "工作桌·公开回应重构",
+      "age": 32,
+      "shot": "同一2023工作桌的过肩手部近景，主角输入回应，面孔不入镜；屏幕和平台样式模糊，不伪造原帖。",
+      "referenceAsset": "w_response_desk",
+      "uses": [
+        "W08"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "同一2023工作桌的过肩手部近景，主角输入回应，面孔不入镜；屏幕和平台样式模糊，不伪造原帖。"
+    },
+    "p_public_exit": {
+      "file": "approved-assets/p_public_exit.webp",
+      "title": "年底走出工作间",
+      "role": "纪实风格场景重构；不是历史原照",
+      "year": "2023 年末",
+      "location": "工作间·离开",
+      "age": 33,
+      "shot": "主角提收好的工作包离开安静工作间，侧后方中远景，普通深色外套；不是获释、逃离或胜诉庆祝。",
+      "referenceAsset": "w_response_desk",
+      "uses": [
+        "W09"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "主角提收好的工作包离开安静工作间，侧后方中远景，普通深色外套；不是获释、逃离或胜诉庆祝。"
+    },
+    "p_case_read": {
+      "file": "approved-assets/p_case_read.webp",
+      "title": "再读案件消息",
+      "role": "纪实风格场景重构；不是历史原照",
+      "year": "2026 年3月",
+      "location": "工作桌·案件消息重构",
+      "age": 35,
+      "shot": "35岁主角在普通桌前看电脑新闻，过肩中景，低头平静阅读；无出庭或付款场景。",
+      "referenceAsset": "w_response_desk",
+      "uses": [
+        "F06"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "35岁主角在普通桌前看电脑新闻，过肩中景，低头平静阅读；无出庭或付款场景。"
+    },
+    "p_case_detail": {
+      "file": "approved-assets/p_case_detail.webp",
+      "title": "材料的一页",
+      "role": "纪实风格场景重构；不是历史原照",
+      "year": "2026 年3月",
+      "location": "同一工作桌·阅读细节",
+      "age": 35,
+      "shot": "同一工作桌的手部近景，翻看一页不可读普通打印材料，电脑在旁；绝不生造法院页眉、判词、公章、签名和金额。",
+      "referenceAsset": "w_response_desk",
+      "uses": [
+        "F07"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "同一工作桌的手部近景，翻看一页不可读普通打印材料，电脑在旁；绝不生造法院页眉、判词、公章、签名和金额。"
+    },
+    "p_case_close": {
+      "file": "approved-assets/p_case_close.webp",
+      "title": "把电脑合上",
+      "role": "纪实风格场景重构；不是历史原照",
+      "year": "2026 年3月",
+      "location": "同一工作桌·合电脑",
+      "age": 35,
+      "shot": "同一房间侧面中景，主角低头把电脑盖轻轻合上，普通材料放回桌边；不笑着宣布结案或完成付款。",
+      "referenceAsset": "w_response_desk",
+      "uses": [
+        "F08"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "同一房间侧面中景，主角低头把电脑盖轻轻合上，普通材料放回桌边；不笑着宣布结案或完成付款。"
+    },
+    "p_first_commute": {
+      "file": "approved-assets/p_first_commute.webp",
+      "title": "第一份工作的早晨",
+      "role": "平行人生虚构照片",
+      "year": "2013 年",
+      "location": "平行人生·上班路",
+      "age": 23,
+      "shot": "23岁青年背工作包随人流走向普通办公楼，侧后方中远景；无名校、offer或名企头衔。",
+      "referenceAsset": "b1_work",
+      "uses": [
+        "B1_01"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "23岁青年背工作包随人流走向普通办公楼，侧后方中远景；无名校、offer或名企头衔。"
+    },
+    "p_writer_home": {
+      "file": "approved-assets/p_writer_home.webp",
+      "title": "下班以后",
+      "role": "平行人生虚构照片",
+      "year": "2011 年秋",
+      "location": "平行人生·下班住处",
+      "age": 21,
+      "shot": "青年在普通住处放下工作包，桌边稿纸和笔还在；渐晚光线，中远景，视线向下，尚未开始改稿。",
+      "referenceAsset": "u_graduate_focus",
+      "uses": [
+        "B2_01"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "青年在普通住处放下工作包，桌边稿纸和笔还在；渐晚光线，中远景，视线向下，尚未开始改稿。"
+    },
+    "p_writer_finished": {
+      "file": "approved-assets/p_writer_finished.webp",
+      "title": "最后一页",
+      "role": "平行人生虚构照片",
+      "year": "2018 年",
+      "location": "平行人生·写作桌",
+      "age": 28,
+      "shot": "日光下手部近景，将最后一页放入已整理齐的一叠稿纸，用普通夹子夹好；不是2012夜间改开头。",
+      "referenceAsset": "b2_revision",
+      "uses": [
+        "B2_05"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "日光下手部近景，将最后一页放入已整理齐的一叠稿纸，用普通夹子夹好；不是2012夜间改开头。"
+    },
+    "p_research_reply": {
+      "file": "approved-assets/p_research_reply.webp",
+      "title": "没有等来的机会",
+      "role": "平行人生虚构照片",
+      "year": "2013 年",
+      "location": "平行人生·申请回复",
+      "age": 23,
+      "shot": "旧式电脑桌面近景，一只手停在触控板旁，读模糊申请回复；书和笔记在旁，不造名校拒信。",
+      "referenceAsset": "a_direction",
+      "uses": [
+        "B3_01"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "旧式电脑桌面近景，一只手停在触控板旁，读模糊申请回复；书和笔记在旁，不造名校拒信。"
+    },
+    "p_partner_office": {
+      "file": "approved-assets/p_partner_office.webp",
+      "title": "对接合作方",
+      "role": "平行人生虚构照片",
+      "year": "2014 年",
+      "location": "平行人生·支付行业办公室",
+      "age": 24,
+      "shot": "青年在普通办公室接电话、看业务笔记，视线向下，中远景；强调合作方沟通，不是敲代码或路演。",
+      "referenceAsset": "c_payment",
+      "uses": [
+        "B4_01"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "青年在普通办公室接电话、看业务笔记，视线向下，中远景；强调合作方沟通，不是敲代码或路演。"
+    },
+    "p_product_messages": {
+      "file": "approved-assets/p_product_messages.webp",
+      "title": "老用户的问题",
+      "role": "平行人生虚构照片",
+      "year": "2017 年",
+      "location": "平行人生·产品桌",
+      "age": 27,
+      "shot": "2017年代手机的手部近景，读模糊用户消息，旁边草图还没划改；不提前表现已经修好或成功。",
+      "referenceAsset": "b5_pending",
+      "uses": [
+        "B5_01"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "2017年代手机的手部近景，读模糊用户消息，旁边草图还没划改；不提前表现已经修好或成功。"
+    },
+    "p_auction_decline": {
+      "file": "approved-assets/p_auction_decline.webp",
+      "title": "这次不竞拍",
+      "role": "平行人生虚构照片",
+      "year": "2019 年6月",
+      "location": "平行人生·办公室",
+      "age": 28,
+      "shot": "同一浅蓝衬衫袖口与桌面，手将电脑盖合上，手机放在旁边，屏幕不可见；即时放弃，不是永久退休。",
+      "referenceAsset": "w_auction",
+      "uses": [
+        "B6_01"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "同一浅蓝衬衫袖口与桌面，手将电脑盖合上，手机放在旁边，屏幕不可见；即时放弃，不是永久退休。"
+    },
+    "p_decline_invite": {
+      "file": "approved-assets/p_decline_invite.webp",
+      "title": "回绝一次邀约",
+      "role": "平行人生虚构照片",
+      "year": "2021 年夜间",
+      "location": "平行人生·工作间",
+      "age": 31,
+      "shot": "夜间台灯下，同一黑连帽袖口将手机屏幕朝下放到桌边，任务纸仍在，面孔不入镜；无假邀约文字。",
+      "referenceAsset": "b6_work",
+      "uses": [
+        "B6_05"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "夜间台灯下，同一黑连帽袖口将手机屏幕朝下放到桌边，任务纸仍在，面孔不入镜；无假邀约文字。"
+    },
+    "p_handover": {
+      "file": "approved-assets/p_handover.webp",
+      "title": "暂时交代好工作",
+      "role": "平行人生虚构照片",
+      "year": "2025 年8月",
+      "location": "平行人生·工作交接",
+      "age": 35,
+      "shot": "35岁灰色便装主角向一位明显不同的同事交代普通资料，中远景；无辞职、退役或取消航班证明。",
+      "referenceAsset": "b7_home",
+      "uses": [
+        "B7_01"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "35岁灰色便装主角向一位明显不同的同事交代普通资料，中远景；无辞职、退役或取消航班证明。"
+    },
+    "p_autumn_reply": {
+      "file": "approved-assets/p_autumn_reply.webp",
+      "title": "空着的半天",
+      "role": "平行人生虚构照片",
+      "year": "2025 年秋",
+      "location": "平行人生·家中",
+      "age": 35,
+      "shot": "同一灰色上衣与木桌窗边，中远景，秋日柔光；回完消息将手机放开，书在手边，季节变化克制。",
+      "referenceAsset": "b7_home",
+      "uses": [
+        "B7_05"
+      ],
+      "reviewStatus": "selected-image-sequence-phone-review-20261026",
+      "reuseReason": "dedicated-shot",
+      "selectedShot": "同一灰色上衣与木桌窗边，中远景，秋日柔光；回完消息将手机放开，书在手边，季节变化克制。"
     }
   },
   "nodes": [
@@ -1561,20 +1914,19 @@
       "id": "H10B",
       "chapter": "高中 · 再寄一次",
       "time": "2007 年初",
-      "asset": null,
-      "kind": "intertitle",
+      "asset": "p_admission_news",
+      "kind": "narration",
       "text": [
-        "北京大学",
-        "新的机会，来了。"
+        "你获得了参加北大自主招生的机会。",
+        "高考，还得接着准备。"
       ],
       "next": "H11",
       "sources": [
         "S03"
       ],
       "evidence": "获自主招生资格据采访；字卡为创作表达",
-      "shot": "独立结果字卡，下方简述自主招生资格仍需继续高考。",
+      "shot": "蓝白校服少年在同一高中房间读普通纸质材料，侧面中景，眼睛朝下；旁边留着练习册，纸上不显示假录取内容。",
       "seconds": 12,
-      "caption": "你获得了参加北大自主招生的机会。高考，还得继续。",
       "checkpoint": false,
       "classification": "historical-reconstruction"
     },
@@ -1696,15 +2048,17 @@
       "id": "U01",
       "chapter": "高中 · 再寄一次",
       "time": "2007 年秋",
-      "asset": null,
+      "asset": "u_arrival",
       "kind": "chapter-end",
       "text": [
-        "你去了上海，后来进入北京大学。",
-        "行李里，还放着那几篇旧稿。"
+        "到了北京，你在校园里停下来，看了一会儿。",
+        "以后就要在这里上课了。"
       ],
-      "sources": [],
-      "evidence": "戏剧化重构；不作为未公开史实",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "sources": [
+        "S05"
+      ],
+      "evidence": "入学据S05；熟悉校园为重构，与U02同一到达场景，不重复高中获奖/行李。",
+      "shot": "校园步道上的人物四分之三中景。17岁阶段主角戴眼镜、背双肩包，双手在口袋里望向旁侧；秋叶、自行车与校园建筑可辨。实际是停留观察，不是远景行走。",
       "seconds": 12,
       "next": "U02",
       "title": "再寄一次",
@@ -1718,8 +2072,8 @@
       "asset": "u_arrival",
       "kind": "narration",
       "text": [
-        "你来到北京大学，最初读中文。",
-        "写文章和学文学，并不是一回事。"
+        "你最初读的是中文。",
+        "上课、读书、交作业，大学生活慢慢忙了起来。"
       ],
       "sources": [
         "S02",
@@ -1757,8 +2111,8 @@
       "asset": "u_desk",
       "kind": "narration",
       "text": [
-        "大学里，你继续写作。",
-        "《一道论证题》讲的，正是之前那段备考经历。"
+        "你把备考经历写成了《一道论证题》。",
+        "喜欢写作，和喜欢文学课，也不一定是一回事。"
       ],
       "sources": [
         "S03"
@@ -1777,11 +2131,11 @@
       "asset": "u_transfer",
       "kind": "choice",
       "text": [
-        "继续读中文，还是换一个专业？",
-        "转系以后，写作也可以留在课余。"
+        "桌上有文学课本，也有历史读物。",
+        "继续读中文，还是换到历史系试试？"
       ],
       "sources": [],
-      "evidence": "戏剧化重构；不作为未公开史实",
+      "evidence": "专业变动据S02/S05；桌面处境与提问为改编，不断言唯一真实转系动机。",
       "shot": "无人物的桌面静物近景。普通书本、笔记本、台灯与一张完全空白的纸在窗光中；不再出现可读申请表标题、填好的表格或学校印章。",
       "seconds": 24,
       "decisionId": "K02",
@@ -1944,8 +2298,8 @@
       "asset": "a_direction",
       "kind": "narration",
       "text": [
-        "你也开始接触数字支付与加密行业。",
-        "毕业之后，可以继续研究，也可以去行业里试试。"
+        "课堂外，你也开始了解数字支付和加密行业。",
+        "毕业快到了，书桌旁多了几份行业资料。"
       ],
       "sources": [
         "S02",
@@ -1965,8 +2319,8 @@
       "asset": "a_direction",
       "kind": "choice",
       "text": [
-        "2013 年，你完成硕士学业。",
-        "接下来，想把时间用在哪里？"
+        "2013 年，你完成了硕士学业。",
+        "继续申请研究机会，还是先去找份工作？"
       ],
       "sources": [
         "S05"
@@ -2015,16 +2369,16 @@
     {
       "id": "A07",
       "chapter": "留学 · 新的方向",
-      "time": "2013—2014",
-      "asset": null,
+      "time": "2013 年底",
+      "asset": "p_work_notes",
       "kind": "chapter-end",
       "text": [
-        "从学生变成从业者。",
-        "下一步，要继续做这份工作，还是开始自己的事情？"
+        "一天的工作收进笔记，明天还要接着做。",
+        "有些想法，却让你想多试一步。"
       ],
       "sources": [],
       "evidence": "戏剧化重构；不作为未公开史实",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "shot": "同一青年在下班时收起工作桌边的笔记和纸张，侧后方中远景，电脑仍在；不是又一次对镜解释业务。",
       "seconds": 12,
       "next": "C01",
       "title": "新的方向",
@@ -2088,13 +2442,13 @@
       "kind": "narration",
       "text": [
         "你开始创业，做自己的产品。",
-        "后来，陪我这样的移动社交产品进入了你的生活。"
+        "后来，你创办了移动社交应用「陪我」。"
       ],
       "sources": [
         "S05",
         "S06"
       ],
-      "evidence": "史实据所列来源；具体场景、动作和措辞为戏剧化重构",
+      "evidence": "创业及陪我身份据S05/S06；具体讨论场景为重构。",
       "shot": "桌边双人中景。青年手持手机，一手解释，左侧同事听取；桌上有普通草图与笔记本电脑。实际比原拟环境宽景更近，手机界面不可读。",
       "seconds": 12,
       "next": "C04",
@@ -2106,18 +2460,20 @@
       "chapter": "创业 · 开始做事",
       "time": "移动产品时期",
       "asset": "c_product_detail",
-      "kind": "narration",
+      "kind": "dialogue",
       "text": [
-        "一部手机，能不能让陌生人聊起来？",
-        "产品讨论，常常从很小的问题开始。"
+        "两个陌生人遇上了，然后呢？",
+        "总不能让人对着手机干瞪眼吧。"
       ],
       "sources": [],
-      "evidence": "戏剧化重构；不作为未公开史实",
+      "evidence": "普通配角对白为戏剧化改编，不是真实私人谈话记录或采访引语。",
       "shot": "2014 年代手机与草图的桌面近景，只有手与袖口，手指向普通产品草图，手机界面不可读。",
       "seconds": 12,
       "next": "C05",
       "checkpoint": false,
-      "classification": "reconstruction"
+      "classification": "reconstruction",
+      "speaker": "同事",
+      "speakerPlacement": "offscreen"
     },
     {
       "id": "C05",
@@ -2164,17 +2520,18 @@
       "id": "C07",
       "chapter": "创业 · 开始做事",
       "time": "2015 年",
-      "asset": null,
-      "kind": "intertitle",
+      "asset": "p_hupan_class",
+      "kind": "narration",
       "text": [
         "2015 年，你成为湖畔首批学员之一。",
-        "创业以外，也开始和更多做企业的人交流。"
+        "到了课堂，先把自己的问题写下来。"
       ],
       "sources": [
-        "S06"
+        "S06",
+        "S19"
       ],
       "evidence": "史实据所列来源；具体场景、动作和措辞为戏剧化重构",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "shot": "传统深木色教室与木桌椅中，青年坐在面貌各异的成年学员间低头记问题；不出现名人私人授课特写。",
       "seconds": 12,
       "next": "C08",
       "checkpoint": false,
@@ -2240,17 +2597,17 @@
       "id": "C10",
       "chapter": "创业 · 开始做事",
       "time": "2017 年",
-      "asset": null,
-      "kind": "intertitle",
+      "asset": "p_published_book",
+      "kind": "narration",
       "text": [
-        "同一年，《这世界既残酷也温柔》出版。",
-        "从校园到创业，你仍然在写。"
+        "2017 年，《这世界既残酷也温柔》出版。",
+        "书放在手边，早年的写作并没有断。"
       ],
       "sources": [
         "S08"
       ],
       "evidence": "史实据所列来源；具体场景、动作和措辞为戏剧化重构",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "shot": "手部近景：普通新装订书与保留旧稿并置，手把书放到桌边；不伪造可读书封、销量、签章或出版通知。",
       "seconds": 12,
       "next": "C11",
       "checkpoint": false,
@@ -2263,8 +2620,8 @@
       "asset": "c_tron_team",
       "kind": "narration",
       "text": [
-        "新的项目开始运转。",
-        "团队、产品与外界的期待，都得往前接。"
+        "新项目里，有人写方案，有人找合作。",
+        "说过要做的东西，现在得一件件做出来。"
       ],
       "sources": [],
       "evidence": "戏剧化重构；不作为未公开史实",
@@ -2315,16 +2672,15 @@
     {
       "id": "C14",
       "chapter": "创业 · 开始做事",
-      "time": "2019 年",
-      "asset": null,
+      "time": "2018 年底",
+      "asset": "p_office_corridor",
       "kind": "chapter-end",
       "text": [
-        "从行业起步，到做自己的产品。",
-        "下一段经历，会让更多人看见你。"
+        "2018 年底，你忙完一天，提着包走出办公室。"
       ],
       "sources": [],
       "evidence": "戏剧化重构；不作为未公开史实",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "shot": "深色外套成年主角提工作包走出办公室，侧后方中远景；门内工作桌、门外走廊延续普通日常。",
       "seconds": 12,
       "next": "W01",
       "title": "开始做事",
@@ -2370,18 +2726,18 @@
       "id": "W02",
       "chapter": "公众 · 被更多人看见",
       "time": "2019 年",
-      "asset": null,
-      "kind": "intertitle",
+      "asset": "p_auction_result",
+      "kind": "narration",
       "text": [
-        "你以约 457 万美元拍下了这次机会。",
-        "慈善竞拍的新闻，让更多人认识了你的名字。"
+        "约 457 万美元，你拍下了这次见面的机会。",
+        "大家都等着看，这顿饭会聊些什么。"
       ],
       "sources": [
         "S02",
         "S09"
       ],
       "evidence": "史实据所列来源；具体场景、动作和措辞为戏剧化重构",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "shot": "浅蓝衬衫主角确认电脑结果后轻靠椅背，克制的意外与满足；与竞拍前不同角度，屏幕不显示生成金额。",
       "seconds": 12,
       "next": "W03",
       "checkpoint": false,
@@ -2451,16 +2807,18 @@
     {
       "id": "W06",
       "chapter": "公众 · 被更多人看见",
-      "time": "2020—2023",
-      "asset": null,
-      "kind": "intertitle",
+      "time": "2023 年3月",
+      "asset": "p_news_city",
+      "kind": "narration",
       "text": [
-        "餐桌上的故事，被带回了新闻里。",
-        "但被看见的，不会永远只有成绩。"
+        "三年过去。",
+        "2023 年，一宗民事诉讼把你的名字带回新闻。"
       ],
-      "sources": [],
+      "sources": [
+        "S15"
+      ],
       "evidence": "戏剧化重构；不作为未公开史实",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "shot": "阴天办公楼外的环境镜头，行人很小，无清晰主角、可读新闻屏幕或司法场景；承接三年时间跳跃。",
       "seconds": 12,
       "next": "W07",
       "checkpoint": false,
@@ -2489,19 +2847,19 @@
     {
       "id": "W08",
       "chapter": "公众 · 被更多人看见",
-      "time": "2023 年",
-      "asset": null,
-      "kind": "intertitle",
+      "time": "2023 年3月",
+      "asset": "p_response_hands",
+      "kind": "narration",
       "text": [
-        "你回应称，这份诉状缺乏依据。",
-        "案件继续推进，后来又有了新的进展。"
+        "你公开回应，称这份诉状缺乏依据。",
+        "回应发出后，案件仍按程序继续。"
       ],
       "sources": [
         "S10",
         "S15"
       ],
-      "evidence": "回应见AP2024报道回述；并不把回应等同于法院认定。",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "evidence": "回应见AP原文回述；具体输入/发布动作与工作桌为重构，不呈现伪造原帖截图。",
+      "shot": "同一2023工作桌的过肩手部近景，主角输入回应，面孔不入镜；屏幕和平台样式模糊，不伪造原帖。",
       "seconds": 12,
       "next": "W09",
       "checkpoint": false,
@@ -2510,16 +2868,15 @@
     {
       "id": "W09",
       "chapter": "公众 · 被更多人看见",
-      "time": "2024—2026",
-      "asset": null,
+      "time": "2023 年末",
+      "asset": "p_public_exit",
       "kind": "chapter-end",
       "text": [
-        "见面、新闻与争议，都成了这段人生的一部分。",
-        "接下来，还有新的场合在等着你。"
+        "年底，你收好东西，离开工作间。"
       ],
       "sources": [],
       "evidence": "戏剧化重构；不作为未公开史实",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "shot": "主角提收好的工作包离开安静工作间，侧后方中远景，普通深色外套；不是获释、逃离或胜诉庆祝。",
       "seconds": 12,
       "next": "F01",
       "title": "被更多人看见",
@@ -2644,18 +3001,17 @@
       "id": "F06",
       "chapter": "世界 · 更大的世界",
       "time": "2026 年3月",
-      "asset": null,
-      "kind": "intertitle",
+      "asset": "p_case_read",
+      "kind": "narration",
       "text": [
-        "时间来到 2026 年。",
-        "那起民事案件，也有了新的进展。"
+        "2026 年 3 月，你再次看到这起案件的消息。"
       ],
       "sources": [
         "S16",
         "S17"
       ],
       "evidence": "史实据所列来源；具体场景、动作和措辞为戏剧化重构",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "shot": "35岁主角在普通桌前看电脑新闻，过肩中景，低头平静阅读；无出庭或付款场景。",
       "seconds": 12,
       "next": "F07",
       "checkpoint": false,
@@ -2665,18 +3021,17 @@
       "id": "F07",
       "chapter": "世界 · 更大的世界",
       "time": "2026 年3月",
-      "asset": null,
-      "kind": "intertitle",
+      "asset": "p_case_detail",
+      "kind": "narration",
       "text": [
-        "3 月，法院作出最终判决，要求 Rainberry 支付 1000 万美元民事罚款。",
-        "SEC 的整体解决方案还包括撤销其余相关请求。"
+        "法院要求 Rainberry（BitTorrent 相关公司）支付 1000 万美元民事罚款。"
       ],
       "sources": [
-        "S16",
-        "S17"
+        "S17",
+        "S18"
       ],
-      "evidence": "史实据所列来源；具体场景、动作和措辞为戏剧化重构",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "evidence": "法院记录支持Rainberry罚款义务；公司关系据SEC诉状第16/69段，不声称已支付或个人刑事定罪。",
+      "shot": "同一工作桌的手部近景，翻看一页不可读普通打印材料，电脑在旁；绝不生造法院页眉、判词、公章、签名和金额。",
       "seconds": 12,
       "next": "F08",
       "checkpoint": false,
@@ -2685,23 +3040,26 @@
     {
       "id": "F08",
       "chapter": "世界 · 更大的世界",
-      "time": "截至2026年9月12日",
-      "asset": null,
-      "kind": "intertitle",
+      "time": "2026 年3月",
+      "asset": "p_case_close",
+      "kind": "narration",
       "text": [
-        "罚款主体是 Rainberry。",
-        "这不等于个人刑事定罪，也不是对所有历史争议的判定。"
+        "你合上电脑，把材料放回桌边。",
+        "手头还有几件事，得接着处理。"
       ],
       "sources": [
+        "S15",
         "S16",
-        "S17"
+        "S17",
+        "S18"
       ],
       "evidence": "史实据所列来源；具体场景、动作和措辞为戏剧化重构",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "shot": "同一房间侧面中景，主角低头把电脑盖轻轻合上，普通材料放回桌边；不笑着宣布结案或完成付款。",
       "seconds": 12,
       "next": "F09",
       "checkpoint": false,
-      "classification": "historical-reconstruction"
+      "classification": "historical-reconstruction",
+      "sourceNote": "2023 年 SEC 提起的是民事诉讼，相关主张是当时的指控。2026 年 3 月 5 日 SEC 公布整体解决方案，提出 Rainberry 民事罚款并撤销其余相关请求；该公告当时仍待法院批准，不能单独当作已经生效的最终判决。3 月 9 日法院记录载最终判决，要求 Rainberry 支付 1000 万美元民事罚款。本游戏没有取得付款证明，不写成已经付款。SEC 诉状记载 Rainberry 以 BitTorrent 名义运营；这里保留案件当时的公司名，不用今天的网站公司名替代。以上不表示个人刑事定罪，也不是对所有历史争议作统一判定。工作桌、阅读和合电脑动作均为重构。"
     },
     {
       "id": "F09",
@@ -2742,16 +3100,16 @@
     {
       "id": "B1_01",
       "chapter": "高中 · 再寄一次",
-      "time": "2007 年以后",
-      "asset": null,
+      "time": "2013 年",
+      "asset": "p_first_commute",
       "kind": "chapter-end",
       "text": [
-        "你留在惠州，继续准备高考。",
-        "夏末，带着旧稿去了另一所大学。"
+        "几年后，毕业、找工作。",
+        "这天，你跟着上班的人，走进了另一种日常。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
+      "shot": "23岁青年背工作包随人流走向普通办公楼，侧后方中远景；无名校、offer或名企头衔。",
       "seconds": 12,
       "next": "B1_02",
       "title": "再寄一次",
@@ -2769,7 +3127,7 @@
         "第一次交的工作稿，却被退了回来。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "普通办公室人物中景。年轻主角戴眼镜，拿起一张工作稿查看，另一手持笔；桌上纸张、旧式笔记本电脑与普通顶灯支持初入职场。",
       "seconds": 22,
       "choices": [
@@ -2798,7 +3156,7 @@
         "对方终于说清了需要什么。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "主角与一位面貌不同的同事在桌边交谈，同事指向工作稿，主角听取；镜头显示沟通而非独自看纸。",
       "seconds": 12,
       "next": "B1_05",
@@ -2816,7 +3174,7 @@
         "拿着具体的东西再谈，总算有了方向。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "近景展示工作稿的修改动作，灰色袖口的手用笔重新写一页，旧稿压在旁边。",
       "seconds": 12,
       "next": "B1_05",
@@ -2834,7 +3192,7 @@
         "下班以后，偶尔也会写一点。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "夜间书桌旁的中景，主角把通勤包放在椅子上，另一只手搭着外套；台灯、书架和夜窗延续家中空间，还未翻开旧稿。",
       "seconds": 12,
       "next": "B1_06",
@@ -2852,7 +3210,7 @@
         "这一次，没有比赛的截止日期。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "夜间家中人物中景。成年主角在小桌边阅读旧稿，台灯照亮纸面，窗外是夜景；房间与少年卧室不同，未刻意营造贫困。",
       "seconds": 12,
       "next": "B1_07",
@@ -2870,26 +3228,39 @@
         "读到当年停下的地方，又拿起了笔。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "旧稿、笔尖和手的近景，黑色针织袖口的手开始在稿纸空白处续写，台灯与夜色和前镜一致。",
       "seconds": 12,
       "endingId": "B1",
       "checkpoint": false,
-      "classification": "fiction"
+      "classification": "fiction",
+      "textVariants": {
+        "nodeId": "B1_02",
+        "byChoice": {
+          "ask_again": [
+            "这一次，没有人告诉你该改哪里。",
+            "你像当年问工作要求那样，在旧稿边上写下几个问题。"
+          ],
+          "rewrite_first": [
+            "你还是先写一版，再决定哪里要改。",
+            "旧稿后面，多了几行新字。"
+          ]
+        }
+      }
     },
     {
       "id": "B2_01",
       "chapter": "平行人生",
-      "time": "本科期间",
-      "asset": null,
+      "time": "2011 年秋",
+      "asset": "p_writer_home",
       "kind": "narration",
       "text": [
-        "你留在中文系。",
-        "毕业以后，一边工作，一边继续写小说。"
+        "你留在中文系，毕业后找了一份工作。",
+        "下班回到住处，桌边还给小说留着位置。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
+      "shot": "青年在普通住处放下工作包，桌边稿纸和笔还在；渐晚光线，中远景，视线向下，尚未开始改稿。",
       "seconds": 12,
       "next": "B2_02",
       "title": "写作者",
@@ -2908,7 +3279,7 @@
         "下班已经很晚，稿子还摊在桌上。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "夜间台灯下的桌面手部近景。只有双手、笔、修改过的稿纸与水杯，窗外黑夜；没有脸或人物胸像，支持下班很晚后继续修改。",
       "seconds": 22,
       "choices": [
@@ -2937,7 +3308,7 @@
         "还不够好，但知道下一步怎么改了。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "同一夜间桌面的更近镜头，旧稿开头被划掉，新纸上刚写下数行；台灯和深色袖口保持一致。",
       "seconds": 12,
       "next": "B2_05",
@@ -2955,7 +3326,7 @@
         "你打算周末再从这一页接着写。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "同一夜间桌面的静物镜头，稿纸与便签整理成一叠，用夹子固定，笔放在旁边；今晚先停下来。",
       "seconds": 12,
       "next": "B2_05",
@@ -2965,16 +3336,16 @@
     {
       "id": "B2_05",
       "chapter": "平行人生",
-      "time": "几年之间",
-      "asset": null,
+      "time": "2018 年",
+      "asset": "p_writer_finished",
       "kind": "narration",
       "text": [
-        "几年里，稿子改了很多遍。",
-        "后来，你终于把它写完，也有了第一批读者。"
+        "几年里，你下班后写，周末接着改。",
+        "2018 年，终于把最后一页放进了稿子。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
-      "shot": "黑底跨年旁白；不沿用2012手部照片代表所有年份。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
+      "shot": "日光下手部近景，将最后一页放入已整理齐的一叠稿纸，用普通夹子夹好；不是2012夜间改开头。",
       "seconds": 12,
       "next": "B2_06",
       "checkpoint": false,
@@ -2991,7 +3362,7 @@
         "你翻到下一页，接着讲。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "小书店阅读活动中远景。成年主角坐着拿稿、面向几位普通听众说话，书架与座位可辨；不展示销量、奖项或真实出版社背书。",
       "seconds": 12,
       "next": "B2_07",
@@ -3009,26 +3380,39 @@
         "有人抬起头，等着你继续。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "小书店的反打镜头，几位普通听众抬头等待，画面边缘仅留讲述者肩膀或稿纸，呼应停顿后的回应。",
       "seconds": 12,
       "endingId": "B2",
       "checkpoint": false,
-      "classification": "fiction"
+      "classification": "fiction",
+      "textVariants": {
+        "nodeId": "B2_02",
+        "byChoice": {
+          "revise_chapter": [
+            "读到那段重写过的开头，你停了一下。",
+            "有人抬起头，等着你继续。"
+          ],
+          "rest_then_write": [
+            "你读到了当年夹着笔记的那一页。",
+            "当时留到周末的话，现在有人在听。"
+          ]
+        }
+      }
     },
     {
       "id": "B3_01",
       "chapter": "平行人生",
-      "time": "2013 年",
-      "asset": null,
+      "time": "2013 年以后",
+      "asset": "p_research_reply",
       "kind": "narration",
       "text": [
-        "你继续申请研究机会。",
-        "第一封等来的回复，并没有带来好消息。"
+        "第一封申请回复，没带来好消息。",
+        "你先工作，再在空闲时读材料；一读，就是几年。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
+      "shot": "旧式电脑桌面近景，一只手停在触控板旁，读模糊申请回复；书和笔记在旁，不造名校拒信。",
       "seconds": 12,
       "next": "B3_02",
       "title": "历史研究者",
@@ -3047,7 +3431,7 @@
         "你决定先把问题缩小。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "书架旁人物中景。成年主角站着查看纸质资料夹，普通图书馆环境，表情专注；没有聘书或真实机构授权标识。",
       "seconds": 22,
       "choices": [
@@ -3076,7 +3460,7 @@
         "进展很小，但不再原地打转。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "档案页与手指的近景，主角沿着注释查材料，深色袖口与资料夹保持连续，字迹不作真实史料展示。",
       "seconds": 12,
       "next": "B3_05",
@@ -3094,7 +3478,7 @@
         "要找的材料，终于具体了起来。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "阅览桌上的写作近景，普通便签中旧题目被划去，手在新纸上重写研究提纲，脸不入镜。",
       "seconds": 12,
       "next": "B3_05",
@@ -3112,7 +3496,7 @@
         "文章写得慢，问题也越问越细。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "图书馆环境远景，主角坐在摊着书和资料的桌边做笔记，人物较小，书架与空间承担时间投入感。",
       "seconds": 12,
       "next": "B3_06",
@@ -3130,7 +3514,7 @@
         "你读完信，把那份材料找了出来。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "阅览区的侧面中远景，主角坐直读信，资料和回信纸在桌上，不再用手托腮的同一人像姿势。",
       "seconds": 12,
       "next": "B3_07",
@@ -3148,26 +3532,39 @@
         "窗外的光，慢慢移了过来。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "明亮阅览桌的手部近景，回信放在一侧，主角用笔对照翻开的资料页，再核对那条注释。",
       "seconds": 12,
       "endingId": "B3",
       "checkpoint": false,
-      "classification": "fiction"
+      "classification": "fiction",
+      "textVariants": {
+        "nodeId": "B3_02",
+        "byChoice": {
+          "follow_archive": [
+            "你回信补上材料的出处，又把那条注释查了一遍。",
+            "当年追过的线索，这次轮到另一个人来找。"
+          ],
+          "redraft_question": [
+            "你在回信里，先解释那个缩小过的问题。",
+            "写完，又把用到的注释查了一遍。"
+          ]
+        }
+      }
     },
     {
       "id": "B4_01",
       "chapter": "平行人生",
-      "time": "2014 年以后",
-      "asset": null,
+      "time": "2014 年",
+      "asset": "p_partner_office",
       "kind": "narration",
       "text": [
-        "你继续做行业业务，后来负责一个市场的项目。",
-        "事情不全由你决定，也得学着把人协调起来。"
+        "你留在支付行业，开始对接合作方。",
+        "解释方案、跟进回复，日程很快排满。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
+      "shot": "青年在普通办公室接电话、看业务笔记，视线向下，中远景；强调合作方沟通，不是敲代码或路演。",
       "seconds": 12,
       "next": "B4_02",
       "title": "职业经理人",
@@ -3182,11 +3579,11 @@
       "asset": "b4_meeting",
       "kind": "choice",
       "text": [
-        "交付时间快到了，两边团队还没谈拢。",
-        "再开一次会，得先解决哪件事？"
+        "合作方等着试用方案，内部却还没排出人手。",
+        "眼下，先解决哪件事？"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "会议桌三人中景。戴眼镜的青年主角穿浅蓝衬衫居中，左侧女性和右侧秃顶年长男性是改编同事，共同查看纸张；没有第二个主角身份。",
       "seconds": 22,
       "choices": [
@@ -3211,11 +3608,11 @@
       "asset": "b4_scope",
       "kind": "narration",
       "text": [
-        "你划掉了暂时做不到的部分。",
-        "剩下的事情，大家终于能排出顺序。"
+        "你先把这次能交的部分说清，让两边确认。",
+        "有些想要的东西，得留到下一次。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "会议桌的纸笔近景，浅蓝袖口的手划掉暂不交付的项目，旁边同事的手压住纸张。",
       "seconds": 12,
       "next": "B4_05",
@@ -3227,18 +3624,20 @@
       "chapter": "平行人生",
       "time": "2016 年",
       "asset": "b4_listen",
-      "kind": "narration",
+      "kind": "dialogue",
       "text": [
-        "你听完了对方的难处。",
-        "原来有一步，换个办法就能先走。"
+        "我们这边不是不想接。",
+        "培训时间还没定，东西到了也没人会用。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "同一会议的反打中景，由同事说明难处，主角侧后身听取，换机位保持三人的衣着与空间关系。",
       "seconds": 12,
       "next": "B4_05",
       "checkpoint": false,
-      "classification": "fiction"
+      "classification": "fiction",
+      "speaker": "合作方",
+      "speakerPlacement": "onscreen"
     },
     {
       "id": "B4_05",
@@ -3247,11 +3646,11 @@
       "asset": "b4_delivered",
       "kind": "narration",
       "text": [
-        "项目没有一口气解决所有问题。",
-        "但该交的部分，最后交出去了。"
+        "这一次，先把约好的材料交过去。",
+        "试用前该谁来接，你也和两边确认清楚了。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "交付后的中远景，主角把整理好的文件夹递给同事，讨论已经变成具体交接，衣着与会议时期一致。",
       "seconds": 12,
       "next": "B4_06",
@@ -3265,11 +3664,11 @@
       "asset": "b4_delivery",
       "kind": "narration",
       "text": [
-        "几年后，会议结束，你把纸笔收好。",
-        "明天还有别的事情，一件件接着做。"
+        "几年后，类似的分歧还是会遇到。",
+        "刚才会上最难的一项，总算有了个答复。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "会议室独处人物中景。成年主角把纸张和笔记收拢，后排椅子空着；支持同事离开后的收束，无任职头衔或奖项。",
       "seconds": 12,
       "next": "B4_07",
@@ -3283,30 +3682,43 @@
       "asset": "b4_close_notebook",
       "kind": "ending",
       "text": [
-        "最后一位同事走了，你把笔记合上。",
-        "会议室安静下来。明天再接着做。"
+        "桌上的分工已经说清。",
+        "你合上本子，明天照这份安排接着做。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "空下来的会议桌近景，黑色袖口的手把笔记本合上，笔放在旁边，背景椅子已空。",
       "seconds": 12,
       "endingId": "B4",
       "checkpoint": false,
-      "classification": "fiction"
+      "classification": "fiction",
+      "textVariants": {
+        "nodeId": "B4_02",
+        "byChoice": {
+          "clarify_scope": [
+            "今天，你又先把这次能做的事列在纸上。",
+            "同事拿着明确的安排离开，你才合上本子。"
+          ],
+          "ask_blocker": [
+            "你在散会前，等对方把顾虑说完。",
+            "最麻烦的那一项有了着落，你把本子合上。"
+          ]
+        }
+      }
     },
     {
       "id": "B5_01",
       "chapter": "平行人生",
       "time": "2017 年",
-      "asset": null,
+      "asset": "p_product_messages",
       "kind": "narration",
       "text": [
         "你把重心留在移动产品上。",
-        "新用户来得慢了，团队得决定先做好什么。"
+        "老用户还在，最近却有人抱怨：聊着聊着，就断了。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
-      "shot": "黑底字卡，DOM文字；手动继续，不生成空白照片。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
+      "shot": "2017年代手机的手部近景，读模糊用户消息，旁边草图还没划改；不提前表现已经修好或成功。",
       "seconds": 12,
       "next": "B5_02",
       "title": "产品创业者",
@@ -3321,12 +3733,12 @@
       "asset": "b5_pending",
       "kind": "choice",
       "text": [
-        "有人想加新功能，也有人说旧问题还没修完。",
-        "你把这次讨论拉回到眼前。"
+        "有人想做新入口，有人说先把聊天做顺。",
+        "这次，先从哪里改起？"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
-      "shot": "产品讨论前的桌面俯侧镜头，旧手机、两份待讨论草图和放下的笔并置，还没有删改或打电话。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
+      "shot": "无人桌面近景。年代合适的手机背面朝上放在桌边；纸上是聊天应用的简略界面线框与气泡，不是手机硬件工程图。没有勾选、划掉功能或提前表示已作选择。",
       "seconds": 22,
       "choices": [
         {
@@ -3350,11 +3762,11 @@
       "asset": "b5_cut_scope",
       "kind": "narration",
       "text": [
-        "功能表被划掉了一大半。",
-        "这次，先让已经在用的人少遇到一个问题。"
+        "你把新功能挪到后面，先处理老问题。",
+        "先让一通聊天顺利结束，再谈别的。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "手机旁的功能草图被删减，黑色袖口的手划掉大半清单，只留下少数任务；镜头不再停在人像。",
       "seconds": 12,
       "next": "B5_05",
@@ -3366,18 +3778,20 @@
       "chapter": "平行人生",
       "time": "同一轮产品讨论",
       "asset": "b5_user_call",
-      "kind": "narration",
+      "kind": "dialogue",
       "text": [
-        "聊完才发现，最需要的东西并不复杂。",
-        "团队把下一版做得更小了一点。"
+        "我不是想要更多按钮。",
+        "聊到一半，别让我又找不到刚才那个人。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "办公室桌前的中景，主角拿着旧手机专注倾听，记事本放在桌上，同事仍在背景工作；和桌面功能草图的选项回应区分。",
       "seconds": 12,
       "next": "B5_05",
       "checkpoint": false,
-      "classification": "fiction"
+      "classification": "fiction",
+      "speaker": "用户 · 电话",
+      "speakerPlacement": "offscreen"
     },
     {
       "id": "B5_05",
@@ -3387,10 +3801,10 @@
       "kind": "narration",
       "text": [
         "几年里，产品改了又改。",
-        "团队规模不大，仍然有人每天打开它。"
+        "团队不大，仍然有人每天打开它，找个人说话。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "小团队日常工作的环境远景，主角在一侧工位处理事情，同事各自在工作，尚未围看反馈。",
       "seconds": 12,
       "next": "B5_06",
@@ -3404,11 +3818,11 @@
       "asset": "b5_feedback_detail",
       "kind": "narration",
       "text": [
-        "今天的反馈里，有人说：这次好用了。",
-        "你把手机递给同事，让大家也看一眼。"
+        "今天，一位老用户发来消息：现在聊天顺多了。",
+        "你把手机朝同事那边推了推。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "主角手中手机的近景，屏幕有模糊的普通消息块，旁边同事尚未围过来；字幕承担具体反馈内容。",
       "seconds": 12,
       "next": "B5_07",
@@ -3422,30 +3836,43 @@
       "asset": "b5_feedback",
       "kind": "ending",
       "text": [
-        "你把那条反馈读给同事听。",
-        "大家凑过来，又看了一遍。"
+        "同事凑过来，把那句反馈又读了一遍。",
+        "你没说什么，和大家一起笑了。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "小团队围看手机的中景。成年主角居中持手机，几位同事凑近查看并微笑；同事脸部和眼镜区别于主角身份，不是融资或颁奖。",
       "seconds": 12,
       "endingId": "B5",
       "checkpoint": false,
-      "classification": "fiction"
+      "classification": "fiction",
+      "textVariants": {
+        "nodeId": "B5_02",
+        "byChoice": {
+          "fix_core": [
+            "你把那条反馈读给同事听：这回没再断。",
+            "当初先修旧问题的人，也凑过来看了一眼。"
+          ],
+          "call_users": [
+            "当年电话里抱怨过的人，又发来一条消息。",
+            "你把手机转给同事：这次，他说好用了。"
+          ]
+        }
+      }
     },
     {
       "id": "B6_01",
       "chapter": "平行人生",
       "time": "2019 年",
-      "asset": null,
+      "asset": "p_auction_decline",
       "kind": "narration",
       "text": [
-        "你没有参与这次竞拍。",
-        "之后，你也逐渐把公开活动排得少了一些。"
+        "你关掉竞拍页面，这次不参加。",
+        "电脑合上了，手机也先放在一边。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
-      "shot": "黑场叙述未参与竞拍及之后减少公开活动，不把竞拍前的照片延用为多年后的生活。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
+      "shot": "同一浅蓝衬衫袖口与桌面，手将电脑盖合上，手机放在旁边，屏幕不可见；即时放弃，不是永久退休。",
       "seconds": 12,
       "next": "B6_02",
       "title": "幕后建设者",
@@ -3460,22 +3887,22 @@
       "asset": "b6_work",
       "kind": "choice",
       "text": [
-        "团队有一项交付迟迟没有往前走。",
-        "你来到桌边，先听发生了什么。"
+        "同事等着你确认，另一边又在催对外展示。",
+        "时间撞在一起，你先把哪件事说清楚？"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "工作桌边人物中景。成年主角穿黑色连帽上衣，站着前倾指向纸张，同事在两侧听取；没有坐下动作或摄影记者。",
       "seconds": 22,
       "choices": [
         {
           "id": "unblock_team",
-          "label": "先解决团队卡住的问题",
+          "label": "先让团队能自己往前走",
           "to": "B6_03"
         },
         {
           "id": "reduce_scope",
-          "label": "先缩小这次的交付范围",
+          "label": "先撤掉这次的对外展示",
           "to": "B6_04"
         }
       ],
@@ -3489,11 +3916,11 @@
       "asset": "b6_close",
       "kind": "narration",
       "text": [
-        "原来几个人一直等着同一个确认。",
-        "你把责任分清，让事情接着往下走。"
+        "你把谁能作决定说清，不再让所有人等你点头。",
+        "手头的事分了出去，外面的安排却还得逐一回复。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "同一工作桌的较近动作镜头。保持黑色连帽上衣、同事位置、纸张和窗光；重点是指向纸面的手，上缘仍留有主角部分下脸，不再描述成完全无人脸。",
       "seconds": 12,
       "next": "B6_05",
@@ -3507,11 +3934,11 @@
       "asset": "b6_scope",
       "kind": "narration",
       "text": [
-        "你把这一次真正要交的部分圈了出来。",
-        "不够完整，但可以先交出能用的东西。"
+        "你圈出这次不再对外展示的部分。",
+        "少一次露脸，团队也能少赶一轮。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "同一工作桌的俯侧近景，黑色连帽袖口的手用笔圈出小范围任务，保留同事袖口和纸张连续性。",
       "seconds": 12,
       "next": "B6_05",
@@ -3521,16 +3948,16 @@
     {
       "id": "B6_05",
       "chapter": "平行人生",
-      "time": "2021 年",
-      "asset": null,
-      "kind": "intertitle",
+      "time": "2021 年 · 当晚",
+      "asset": "p_decline_invite",
+      "kind": "narration",
       "text": [
-        "后来，这样的工作占了更多时间。",
-        "你主动少接一些镜头前的邀约。"
+        "当晚，又来了一次公开活动的邀约。",
+        "你回了句「这次先不去了」，把手机放到一边。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
-      "shot": "黑场时间过渡，完整句子按正文排版；手动继续，下一幕切入新的生活动作。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
+      "shot": "夜间台灯下，同一黑连帽袖口将手机屏幕朝下放到桌边，任务纸仍在，面孔不入镜；无假邀约文字。",
       "seconds": 12,
       "next": "B6_06",
       "checkpoint": false,
@@ -3541,18 +3968,20 @@
       "chapter": "平行人生",
       "time": "2021 年",
       "asset": "b6_listening",
-      "kind": "narration",
+      "kind": "dialogue",
       "text": [
-        "工作间里，大家还在讨论下一步。",
-        "你站到桌边，听完了同事的想法。"
+        "外面的安排先不用你操心。",
+        "这里还有一处，想请你看一下。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "工作间里的反应镜头，同事在说明，主角扶着椅背听取，尚未指向桌上纸张。",
       "seconds": 12,
       "next": "B6_07",
       "checkpoint": false,
-      "classification": "fiction"
+      "classification": "fiction",
+      "speaker": "同事",
+      "speakerPlacement": "onscreen"
     },
     {
       "id": "B6_07",
@@ -3565,26 +3994,39 @@
         "大家接着讨论，没有人拿出相机。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "工作桌边人物中景。成年主角穿黑色连帽上衣，站着前倾指向纸张，同事在两侧听取；没有坐下动作或摄影记者。",
       "seconds": 12,
       "endingId": "B6",
       "checkpoint": false,
-      "classification": "fiction"
+      "classification": "fiction",
+      "textVariants": {
+        "nodeId": "B6_02",
+        "byChoice": {
+          "unblock_team": [
+            "你先听同事把话说完，再指了指那一页。",
+            "接下来该谁做，大家都清楚了。"
+          ],
+          "reduce_scope": [
+            "那次对外展示少了一项，工作间却多了点时间。",
+            "你指向桌上的问题，和同事接着看。"
+          ]
+        }
+      }
     },
     {
       "id": "B7_01",
       "chapter": "平行人生",
-      "time": "2025 年",
-      "asset": null,
+      "time": "2025 年8月",
+      "asset": "p_handover",
       "kind": "narration",
       "text": [
-        "你暂时不参加这次飞行，安排好手头工作的交接。",
-        "大型公开活动，也空出了一段时间。"
+        "你把接下来的工作交代清楚，暂缓这次飞行。",
+        "先空出一阵子，再决定要不要把日程排满。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
-      "shot": "黑底旁白过渡：交接已完成，来到空下来的上午。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
+      "shot": "35岁灰色便装主角向一位明显不同的同事交代普通资料，中远景；无辞职、退役或取消航班证明。",
       "seconds": 12,
       "next": "B7_02",
       "title": "另一种日常",
@@ -3603,7 +4045,7 @@
         "桌上放着一本很久没翻的书。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "窗边家居桌面的静物近景。旧绿色书合着、夹有书签，旁有普通杯子，灰色沙发和木色书架延续后续阅读场景；无手、无脸，不提前打开书。",
       "seconds": 22,
       "choices": [
@@ -3632,7 +4074,7 @@
         "这次，你终于往后多读了几页。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "窗边坐姿人物中景。成年主角穿灰色上衣，双手拿着已打开的旧书阅读，身旁书架、植物与杯子可辨；只在阅读选择之后使用。",
       "seconds": 12,
       "next": "B7_05",
@@ -3650,7 +4092,7 @@
         "没有赶行程，脚步也慢了下来。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "公园步道背侧人物中景。成年主角穿同一灰色上衣，在步道上回头，周围绿树和长椅；与居家身份、衣着连续，无保镖或媒体。",
       "seconds": 12,
       "next": "B7_05",
@@ -3660,16 +4102,16 @@
     {
       "id": "B7_05",
       "chapter": "平行人生",
-      "time": "同年秋天",
-      "asset": null,
-      "kind": "intertitle",
+      "time": "2025 年秋",
+      "asset": "p_autumn_reply",
+      "kind": "narration",
       "text": [
-        "过了一阵，你习惯了不排满的日子。",
-        "工作仍然有交接，也有需要回应的时候。"
+        "到了秋天，工作仍有需要你回应的时候。",
+        "你回完消息，把今天剩下的时间留空。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
-      "shot": "黑场时间过渡，完整句子按正文排版；手动继续，下一幕切入新的生活动作。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
+      "shot": "同一灰色上衣与木桌窗边，中远景，秋日柔光；回完消息将手机放开，书在手边，季节变化克制。",
       "seconds": 12,
       "next": "B7_06",
       "checkpoint": false,
@@ -3686,7 +4128,7 @@
         "你在公园里多走了一段。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "秋天公园步道的低机位近景，深色裤腿和灰白运动鞋往前迈步，落叶承接新的季节。",
       "seconds": 12,
       "next": "B7_07",
@@ -3704,17 +4146,30 @@
         "今天还有时间，再走一小段。"
       ],
       "sources": [],
-      "evidence": "平行人生虚构；人物、工作、对白及结果均为创作，不补充真人未公开经历。",
+      "evidence": "平行人生虚构；人物、工作、对白、反馈和结果均为创作，不补充真人未公开经历。",
       "shot": "秋天公园的后方远景，灰色上衣主角继续沿步道往前，路口与前方空间可见，不再回头看镜头。",
       "seconds": 12,
       "endingId": "B7",
       "checkpoint": false,
-      "classification": "fiction"
+      "classification": "fiction",
+      "textVariants": {
+        "nodeId": "B7_02",
+        "byChoice": {
+          "read_old_book": [
+            "书签已经往后挪了几页。",
+            "这天散步，你走过路口，又往前多走了一段。"
+          ],
+          "walk_outside": [
+            "你又走到了第一次出门散心的路口。",
+            "这次没有停，沿着步道继续往前。"
+          ]
+        }
+      }
     }
   ],
   "schemaVersion": 4,
   "title": "孙哥的模拟人生",
-  "status": "complete-script-and-selected-art",
+  "status": "polish-script-and-shots-frozen; new-images-pending",
   "historicalCutoff": "2026-09-12",
   "chapters": {
     "序章": {
@@ -3841,6 +4296,16 @@
       "title": "纽约南区联邦法院：2026-03-09最终判决（Justia镜像）",
       "url": "https://law.justia.com/cases/federal/district-courts/new-york/nysdce/1:2023cv02433/596044/98/",
       "note": "2026-10-24重读法院判决记录摘要；Rainberry被命支付1000万美元民事罚款，未取得付款证明。原PDF本轮直接提取遭403；不扩展到未读到的具体判决条款，不写个人刑事定罪或全面免责。"
+    },
+    "S18": {
+      "title": "SEC修订诉状：Rainberry与BitTorrent身份（第16、69段）",
+      "url": "https://www.sec.gov/files/litigation/complaints/2026/comp26496.pdf",
+      "note": "用于历史案件中的公司名与BitTorrent运营关系，不用现行网站公司名改写旧案当事人。"
+    },
+    "S19": {
+      "title": "央广网2015-03-25：湖畔开学前采访",
+      "url": "https://finance.cnr.cn/gs/20150325/t20150325_518125087.shtml",
+      "note": "传统建筑、深木教室与木桌椅；不生成未经核实的名人私人对话，不把采访日当上课日。"
     }
   },
   "decisions": {

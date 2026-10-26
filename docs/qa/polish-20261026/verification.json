@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-26",
+  "version": "1.1.0",
+  "status": "local-and-clean-source-passed; publication-pending",
+  "content": {
+    "nodes": 120,
+    "scenePhotos": 108,
+    "newPhotos": 22,
+    "replacedExistingPhotos": 1,
+    "blackTitles": [
+      "P03",
+      "A01",
+      "C01"
+    ],
+    "decisions": 7,
+    "endings": 8,
+    "paths": 15
+  },
+  "savedProgress": {
+    "allGraphAndCheckpointIdentitiesUnchanged": true,
+    "saveVersion": 4,
+    "unitCoverage": "existing state/cache tests plus old v4 photo-recap and choice-aware history/rewind tests"
+  },
+  "unitTests": {
+    "passed": 23
+  },
+  "localBrowser": {
+    "initialFullSuite": {
+      "passed": 36,
+      "failed": 1,
+      "reason": "New test incorrectly expected immediate callbacks; authored callbacks are at branch endings."
+    },
+    "fixedCallback": {
+      "passed": 1
+    },
+    "finalFocusedSuite": {
+      "passed": 5,
+      "coverage": [
+        "factual photo narration",
+        "both local choices through ending/history/accessibility",
+        "homepage start/resume/About/GitHub",
+        "five desktop/phone viewports and touch rotation",
+        "slow opening image"
+      ]
+    },
+    "sceneCapture": [
+      {
+        "viewport": "390-standard",
+        "routes": 15,
+        "uniqueScenes": 120,
+        "maxCache": 6,
+        "clippedText": [],
+        "errors": [],
+        "targetedRecaptures": [
+          "H10B after shortening the final sentence; actual UI text and no scroll verified"
+        ]
+      },
+      {
+        "viewport": "320-large",
+        "routes": 15,
+        "uniqueScenes": 120,
+        "maxCache": 6,
+        "clippedText": [],
+        "errors": [],
+        "targetedRecaptures": [
+          "H10B after shortening the final sentence; actual UI text and no scroll verified"
+        ]
+      }
+    ]
+  },
+  "visualReview": {
+    "individualSelectedImages": 23,
+    "mainSequence": "root-reviewed",
+    "alternativeSequences": "independent-reviewed",
+    "cover": "A selected after comparing two variants, real title/menu checked",
+    "banner": "independently recomposed at 2:1, exact Chinese title checked",
+    "caption": "balanced wrapping plus shortened H10B, target recaptured at both sizes"
+  },
+  "selectedMarketingFiles": [
+    {
+      "file": "public/title-lives.webp",
+      "bytes": 142532,
+      "sha256": "8c5a8bc301b02dba708ccb39c1e34eececfc7a98268a4bb4c7b09132f70cb905"
+    },
+    {
+      "file": "docs/media/cover.jpg",
+      "bytes": 125625,
+      "sha256": "9c1224d100dc966c2174d6d83a6573df5395380a3263b99f0b7ff2949df4409e"
+    },
+    {
+      "file": "docs/media/high-school.jpg",
+      "bytes": 49521,
+      "sha256": "ed1c93daefcbe82ada9d34fd0956f48a732b900223abf8a574aa8928247b616a"
+    },
+    {
+      "file": "docs/media/auction.jpg",
+      "bytes": 50327,
+      "sha256": "dbe30dc0fe485aaacb9e89f1c5851ae54c2a0457edef523e8ff647fa3e06351c"
+    },
+    {
+      "file": "docs/media/writing.jpg",
+      "bytes": 54514,
+      "sha256": "bc3130a64e67d1aaec2d3f76e63b8804534d69b75137d5ada5fdec4e76e9eb5f"
+    }
+  ],
+  "limits": [
+    "Physical iPhone/Android not tested.",
+    "Human reading time not measured.",
+    "No claim that automation establishes fun or historical-photo authenticity."
+  ],
+  "cleanSource": {
+    "files": 205,
+    "frozenLockInstall": "passed, offline store reuse; no dependency change",
+    "privateAuthoringInputs": false,
+    "basePath": "/sun-life-simulator/",
+    "build": "passed",
+    "unitTests": 23
+  }
+}

@@ -84,7 +84,7 @@ test('a slow photo preserves the previous frame and delays the hint, text and co
 test('a slow opening uses the same discreet hint and enables start only after the photo', async ({ page }) => {
   let release!: () => void;
   const gate = new Promise<void>(resolve => { release = resolve; });
-  await page.route('**/title-screen.webp', async route => { await gate; await route.continue(); });
+  await page.route('**/title-lives.webp', async route => { await gate; await route.continue(); });
   // The deliberately stalled preload must not block reaching the loading UI.
   await page.goto(entry, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('.load-hint')).toBeVisible();

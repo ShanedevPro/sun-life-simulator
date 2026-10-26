@@ -57,7 +57,7 @@ a { color: var(--brass); text-underline-offset: 4px; }
 .story-panel { position: absolute; z-index: 2; bottom: 0; left: 0; right: 0; padding: 22px var(--pad) calc(20px + env(safe-area-inset-bottom)); max-height: 42%; display: flex; flex-direction: column; }
 .narrative-scroll { min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; }
 .narrative { font-size: var(--text); line-height: 1.65; letter-spacing: .025em; text-align: center; text-shadow: 0 1px 6px #000; }
-.narrative p { margin: 0 0 3px; }
+.narrative p { margin: 0 0 3px; text-wrap: balance; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 .reveal-text span { transition: opacity .08s linear; }
 .reveal-text .unrevealed { opacity: 0; visibility: hidden; }
@@ -86,11 +86,7 @@ a { color: var(--brass); text-underline-offset: 4px; }
 .chapter-divider { height: 1px; width: 32px; background: var(--brass); margin: 28px auto; }
 .intertitle-caption { font-size: 15px; line-height: 1.85; letter-spacing: .06em; max-width: 270px; margin: 0 auto; color: var(--muted); }
 .intertitle .continue-button { margin-top: auto; flex-shrink: 0; }
-.narration-card .eyebrow { margin-bottom: 24px; }
-.narration-card .intertitle-subtitle { font: 400 var(--text)/1.7 var(--serif); letter-spacing: .025em; margin: 0 0 18px; }
-.narration-card .intertitle-subtitle:last-of-type { margin-bottom: 0; }
-.chapter-recap h1 { font-size: 34px; }
-.chapter-recap .intertitle-subtitle { font-family: inherit; font-size: var(--text); line-height: 1.8; letter-spacing: .025em; }
+.chapter-recap-title { margin: 0 0 12px; font: 400 17px/1.5 var(--serif); letter-spacing: .12em; text-align: center; color: var(--brass); text-shadow: 0 1px 6px #000; }
 .ending-panel { position: absolute; z-index: 2; bottom: 0; left: 0; right: 0; height: 51%; max-height: 58%; display: flex; flex-direction: column; padding: 22px var(--pad) calc(18px + env(safe-area-inset-bottom)); text-align: center; background: linear-gradient(transparent, #090a0ab5 14%, #090a0af2 55%, #090a0a); }
 .ending-panel > .eyebrow { color: #e0d4b5; text-shadow: 0 1px 4px #000, 0 0 10px #000; }
 .ending-title { font: 400 32px/1.4 var(--serif); letter-spacing: .1em; margin: 12px 0 16px; flex-shrink: 0; }
@@ -163,6 +159,10 @@ a { color: var(--brass); text-underline-offset: 4px; }
 .unseen-ending { display: flex; align-items: center; gap: 18px; min-height: 72px; border-bottom: 1px solid #d7ccae33; color: var(--muted); font-size: 15px; }
 .unseen-ending .diamond { opacity: .45; width: 9px; height: 9px; }
 .source-list li { border-bottom: 1px solid #d7ccae33; padding: 8px 0; }
+.source-notes { margin-top: 28px; }
+.source-notes h3 { font: 400 22px/1.5 var(--serif); }
+.source-note { padding: 12px 0; border-top: 1px solid #d7ccae33; }
+.source-note p { margin: 0; }
 .large-text .collection-copy p, .large-text .replay-item-title { font-size: 20px; }
 .about-copy { font-size: 16px; line-height: 1.9; color: #d5d0c5; }
 .about-copy a { display: block; padding: 12px 0; min-height: 44px; font-size: 14px; }
@@ -251,6 +251,8 @@ a { color: var(--brass); text-underline-offset: 4px; }
   .game-header { padding-top: 8px; padding-right: 10px; }
   .scene-time, .eyebrow { font-size: 10px; letter-spacing: .06em; }
   .story-panel, .has-actions { max-height: calc(100% - 60px); padding-top: 12px; padding-bottom: 12px; }
+  .chapter-recap-state .photo-stage { bottom: var(--reading-height, 40%); }
+  .chapter-recap-title { margin-bottom: 8px; font-size: 14px; }
   .narrative { line-height: 1.5; }
   .has-actions { background: linear-gradient(transparent, #090a0ab5 18%, #090a0af2 55%, #090a0a); }
   .actions { margin-top: 12px; gap: 8px; }

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "nodes": 120,
+  "photos": 108,
+  "imageBytes": 11344158,
+  "decisions": 7,
+  "endings": [
+    "R0",
+    "B7",
+    "B6",
+    "B5",
+    "B4",
+    "B3",
+    "B2",
+    "B1"
+  ],
+  "playablePaths": 15,
+  "longestPath": 67,
+  "problems": [],
+  "warnings": []
+}
